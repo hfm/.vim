@@ -1,0 +1,97 @@
+snippet     desc
+abbr        describe '' do ... end
+prev_word   '^'
+    describe '${1:target}' do
+        ${2:example}
+    end
+
+snippet     cont
+abbr        context '' do ... end
+prev_word   '^'
+    context '${1:target}' do
+        ${2:example}
+    end
+
+snippet     bef
+abbr        before {}
+prev_word   '^'
+    before { ${1:proc} }
+
+snippet     befdo
+abbr        before do ... end
+prev_word   '^'
+    before do
+        ${1:proc}
+    end
+snippet     sub
+abbr        subject.method
+    subject.${1:method}
+
+snippet     subj
+abbr        subject {}
+prev_word   '^'
+    subject { ${1:expression} }
+
+snippet     it
+abbr        it {}
+prev_word   '^'
+    it { ${1:expression} }
+
+snippet     itdo
+abbr        it '' do ... end
+prev_word   '^'
+    it '${1:target}' do
+        ${2:example}
+    end
+
+snippet     itl
+abbr        it { ->{} }
+prev_word   '^'
+    it { ->{ ${1:lambda} } }.should ${2:change}
+
+snippet     its
+abbr        its(:hoge) {}
+prev_word   '^'
+    its(:${1:method}) { ${2:expression} }
+
+snippet     let
+abbr        let(:hoge) {}
+prev_word   '^'
+    let(:${1:name}) { ${2:expression} }
+
+snippet     letb
+abbr        let!(:hoge) {}
+prev_word   '^'
+    let${1:!}(:${2:name}) { ${3:expression} }
+
+snippet     cha
+abbr        change(Hoge, :fuga)
+    change(${1:target}, :${2:method})
+
+snippet     changeby
+abbr        change(Hoge, :fuga).by(1)
+    change(${1:target}, :${2:method}).by(${3:increment})
+
+snippet     changeto
+abbr        change(Hoge, :fuga).from(old).to(new)
+    change(${1:target}, :${2:method}).from(${3:old_value}).to(${4:new_value})
+
+snippet     expect
+abbr        expect().to be_valid
+prev_word   '^'
+    expect(${1:target}).to ${2:be_valid}
+
+snippet     expectdo
+abbr        expect do end.to be_valid
+prev_word   '^'
+    expect do
+      ${1:target}
+    end.to ${2:be_valid}
+
+snippet     sho
+abbr        should
+    should be_${1:value}
+
+snippet     shon
+abbr        should_not
+    should_not be_${1:value}

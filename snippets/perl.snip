@@ -1,0 +1,14 @@
+snippet shebangs
+abbr    shebang and magic
+prev_word '^'
+    #!/usr/bin/env perl
+
+    use strict;
+    use warnings;
+
+snippet foreach
+abbr    foreach (attr) { expression }
+prev_word   '^'
+    foreach (${1:attr}) {
+        ${2:expression}
+    }
