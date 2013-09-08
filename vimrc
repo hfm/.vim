@@ -133,8 +133,8 @@ set clipboard=unnamed "クリップボードを利用する
 "}}}
 " ##keymaps {{{2
 " http://avr.paslog.jp/article/2496343.html
-nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR> " .vimrcを開く
-nnoremap <Space>,  :<C-u>source $MYVIMRC<CR>  " source ~/.vimrc を実行する。
+nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR>
+nnoremap <Space>,  :<C-u>source $MYVIMRC<CR>
 
 "" 挿入モード中に'Ctr-*'でコマンドモードでの移動・削除を可能にする
 inoremap <C-h> <Left>
@@ -150,19 +150,18 @@ colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-syntax enable   "シンタックスカラーリングを設定する
-set number "行番号を表示する
-set title "編集中のファイル名を表示する
-set showcmd "入力中のコマンドを表示する
-set ruler "座標を表示する
-set list "タブ、行末等の不可視文字を表示する
-set showmatch   "閉じ括弧の入力時に対応する括弧を表示する
-set matchtime=3 "showmatchの表示時間
-set listchars=eol:$,tab:>\ ,extends:< "listで表示される文字のフォーマットを指定する
-set laststatus=2 "ステータスラインを常に表示する
-" http://yuroyoro.hatenablog.com/entry/20120211/1328930819
-" カーソル行をハイライト
-set cursorline
+syntax enable " シンタックスカラーリングを設定する
+set number " 行番号を表示する
+set title " 編集中のファイル名を表示する
+set showcmd " 入力中のコマンドを表示する
+set ruler " 座標を表示する
+set list " タブ、行末等の不可視文字を表示する
+set showmatch   " 閉じ括弧の入力時に対応する括弧を表示する
+set matchtime=3 " showmatchの表示時間
+set listchars=eol:$,tab:>\ ,extends:< " listで表示される文字のフォーマットを指定する
+set laststatus=2 " ステータスラインを常に表示する
+
+set cursorline " カーソル行をハイライト
 " カレントウィンドウにのみ罫線を引く
 augroup cch
   autocmd! cch
