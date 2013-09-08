@@ -102,7 +102,6 @@ augroup END
 " ##Encode {{{2
 set encoding=utf-8
 set fileencoding=utf-8
-set fileformat=unix,mac,dos
 "}}}
 " ##File {{{2
 set hidden "ファイル変更中でも他のファイルを開けるようにする
@@ -265,9 +264,9 @@ let g:surround_custom_mapping.ruby = {
       \ }
 " }}}
 " ##vim-indent-guides {{{2
-let g:indent_guides_enable_on_vim_startup=1 " vim-indent-guidesの自動有効化
-let g:indent_guides_color_change_percent=5 "色の変化の幅（パーセント）
-let g:indent_guides_guide_size=1 "インデントの色付け幅
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_color_change_percent=10
+let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=1
 let g:indent_guides_space_guides=1
 "}}}
