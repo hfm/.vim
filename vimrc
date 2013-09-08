@@ -100,9 +100,9 @@ augroup filetypedetect
 augroup END
 "}}}
 " ##Encode {{{2
-set encoding=UTF-8 "文字コードをUTF-8にする
-set fileencoding=UTF-8 "文字コードをUTF-8にする
-set termencoding=UTF-8 "文字コードをUTF-8にする
+set encoding=utf-8
+set fileencoding=utf-8
+set fileformat=unix,mac,dos
 "}}}
 " ##File {{{2
 set hidden "ファイル変更中でも他のファイルを開けるようにする
