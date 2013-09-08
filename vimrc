@@ -173,6 +173,7 @@ augroup END
 hi clear CursorLine
 hi CursorLine gui=underline
 hi CursorLine ctermbg=black guibg=black
+nnoremap <Leader>c :<C-u>setlocal cursorline!<CR>
 
 set guifont=RictyForPowerline-Regular
 set guifontset=RictyForPowerline-Regular
