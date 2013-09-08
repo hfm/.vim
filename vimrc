@@ -300,10 +300,6 @@ augroup RSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 "}}}
-" ##vim-flake8 {{{2
-let g:flake8_builtins="_,apply"
-autocmd BufWritePost *.py call Flake8()
-"}}}
 " ##vim-easymotion {{{2
 " hi EasyMotionTarget ctermbg=darkblue ctermfg=white
 " hi link EasyMotionShade Comment
