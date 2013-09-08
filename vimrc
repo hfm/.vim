@@ -94,7 +94,7 @@ filetype plugin indent on
 " #Preferences {{{1
 " ##Snippets and Dict {{{2
 augroup filetypedetect
-  autocmd! BufNewFile,BufRead Gemfile,*.rake,Vagrantfile set filetype=ruby
+  autocmd! BufNewFile,BufRead Gemfile,*.rake,Vagrantfile,Brewfile set filetype=ruby
   autocmd! BufNewFile,BufRead *.psgi,*.t   set filetype=perl
   autocmd! BufNewFile,BufRead *.tt setf tt2html
 augroup END
