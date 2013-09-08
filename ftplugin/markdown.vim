@@ -6,8 +6,8 @@ abbreviate tl - [ ]
 setlocal foldmethod=indent
 
 " todoリストのon/offを切り替える
-nnoremap <buffer> <Leader><Leader> :call ToggleCheckbox()<CR>
-vnoremap <buffer> <Leader><Leader> :call ToggleCheckbox()<CR>
+nnoremap <buffer> <Space> :call ToggleCheckbox()<CR>
+vnoremap <buffer> <Space> :call ToggleCheckbox()<CR>
 
 " 選択行のチェックボックスを切り替える
 function! ToggleCheckbox()
