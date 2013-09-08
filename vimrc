@@ -350,11 +350,6 @@ map ,mn  :MemoNew<CR>
 map ,ml  :MemoList<CR>
 map ,mg  :MemoGrep<CR>
 " }}}
-" ##zen-coding {{{2
-let g:user_zen_settings = {
-      \  'lang' : 'ja',
-      \ 'indentation': "  "}
-"}}}
 " ##lightline {{{2
 let g:lightline = {
       \ 'colorscheme': 'solarized',
@@ -415,7 +410,6 @@ endfunction
 " }}}
 " ##other plugins {{{2
 let g:unite_source_ruby_require_ruby_command='$HOME/.rbenv/shims/ruby'
-let g:vim_markdown_folding_disabled=1
 nmap <Leader>t :TagbarToggle<CR>
 "}}}
 "}}}
