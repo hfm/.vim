@@ -300,13 +300,6 @@ augroup RSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 "}}}
-" ##vim-easymotion {{{2
-" hi EasyMotionTarget ctermbg=darkblue ctermfg=white
-" hi link EasyMotionShade Comment
-" let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
-" let g:EasyMotion_leader_key="'"
-" let g:EasyMotion_grouping=1 " 1 ストローク選択を優先する
-"}}}
 " ##vim-quickrun {{{2
 let g:quickrun_config = {}
 let g:quickrun_config._={
