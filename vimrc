@@ -44,9 +44,9 @@ else
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'kana/vim-smartinput'
-  NeoBundle 'tomtom/tcomment_vim'
+  NeoBundle 'tcomment_vim'
   NeoBundle 'Align'
-  NeoBundle 'tpope/vim-fugitive'
+  NeoBundle 'vim-fugitive'
   NeoBundle 'majutsushi/tagbar', {
         \ 'autload': {
         \   'commands': ['TagbarToggle'],
