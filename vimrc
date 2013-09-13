@@ -307,30 +307,6 @@ function! s:my_action.func(candidates)
 endfunction
 call unite#custom_action('file', 'my_vsplit', s:my_action)
 "}}}
-" ##vim-smartinput{{{2
-"http://studio.tgl.jp/blog/?p=1835 HTML, ERB
-call smartinput#map_to_trigger('i', '<', '<', '<')
-call smartinput#map_to_trigger('i', '>', '>', '>')
-call smartinput#define_rule({
-      \   'at': '\%#', 'char': '<', 'input': '<>',
-      \   'filetype': ['html', 'eruby'],
-      \ })
-call smartinput#define_rule({
-      \   'at': '<.*\%#>', 'char': '>', 'input': '',
-      \   'filetype': ['html', 'eruby'],
-      \ })
-
-" ERB
-call smartinput#map_to_trigger('i', '%', '%', '%')
-call smartinput#define_rule({
-      \   'at': '<\%#', 'char': '%', 'input': '%%',
-      \   'filetype': ['eruby'],
-      \ })
-call smartinput#define_rule({
-      \   'at': '%.*\%#%', 'char': '%', 'input': '',
-      \   'filetype': ['eruby'],
-      \ })
-"}}}
 " ##jekyll{{{2
 let g:jekyll_path = "~/Documents/blog"
 let g:jekyll_post_published = "false"
