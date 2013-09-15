@@ -7,13 +7,13 @@ let s:noplugin = 0
 let s:bundle_root = expand('~/.vim/bundle')
 let s:neobundle_root = s:bundle_root . '/neobundle.vim'
 if !isdirectory(s:neobundle_root) || v:version < 702
-  " NeoBundleが存在しない、もしくはVimのバージョンが古い場合はプラグインを一切
-  " 読み込まない
+  " NeoBundleが存在しない、もしくはVimのバージョンが古い場合はプラグインを一切読み込まない
   let s:noplugin = 1
 else
-  " NeoBundleを'runtimepath'に追加し初期化を行う
   if has('vim_starting')
-    execute "set rtp+=" . s:neobundle_root
+    set rtp+=$GOROOT/misc/vim
+    exe "set rtp+=" . s:neobundle_root
+    exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
   endif
   call neobundle#rc(s:bundle_root)
 
@@ -83,6 +83,7 @@ else
   NeoBundle 'csexton/jekyll.vim'
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'fuenor/qfixgrep'
+  NeoBundle 'mattn/sonictemplate-vim'
 
   NeoBundleCheck
 endif
