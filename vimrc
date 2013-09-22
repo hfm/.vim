@@ -47,6 +47,10 @@ NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'c9s/perlomni.vim', {
   \ 'autoload': {'filetypes': ['perl']}}
+NeoBundleLazy 'y-uuki/unite-perl-module.vim', {
+  \ 'autoload': {'filetypes': ['perl']}}
+NeoBundleLazy 'y-uuki/perl-local-lib-path.vim', {
+  \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
   \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
 NeoBundleLazy 'nvie/vim-flake8', {
