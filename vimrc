@@ -21,9 +21,10 @@ else
   "}}}
   " ##plugin {{{2
   NeoBundle 'Shougo/neocomplcache'
-  NeoBundleLazy 'Shougo/unite.vim', { 'autoload' : {'commands' : ['Unite', 'UniteWithBufferDir'] } }
-  NeoBundle 'Shougo/vimfiler.vim', {
-        \ 'depends': ['Shougo/unite.vim'],
+  NeoBundleLazy 'Shougo/unite.vim', { 'autoload' : { 'commands' : ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir'] } }
+  NeoBundle 'ujihisa/unite-colorscheme'
+  NeoBundle 'ujihisa/unite-font'
+  NeoBundleLazy 'Shougo/vimfiler.vim', {
         \ 'autoload': {
         \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
         \   'mappings': ['<Plug>(vimfiler_switch)'],
@@ -36,6 +37,7 @@ else
         \ }}
   NeoBundleLazy 'Shougo/neosnippet', { 'autoload': {'insert': 1 } }
   NeoBundle 'altercation/vim-colors-solarized'
+  NeoBundle 'mhinz/vim-startify'
   NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'itchyny/lightline.vim'
   NeoBundle 'scrooloose/syntastic'
