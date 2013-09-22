@@ -178,12 +178,13 @@ endif
 " ##unite.vim {{{2
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR> "バッファ一覧
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR> "ファイル一覧
-nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR> "レジスタ一覧
-nnoremap <silent> ,um :<C-u>Unite file_mru<CR> "最近使用したファイル一覧
-nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR> "常用セット
-nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR> "全部乗せ
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> ,us :<C-u>Unite colorscheme -auto-preview<Cr>
 " grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 nnoremap <silent> ,ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,uc :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
