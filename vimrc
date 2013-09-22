@@ -1,96 +1,68 @@
 " #NeoBundle {{{1
 " ##setup {{{2
-" "http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
 set nocompatible
 
-let s:noplugin = 0
-let s:bundle_root = expand('~/.vim/bundle')
-let s:neobundle_root = s:bundle_root . '/neobundle.vim'
-if !isdirectory(s:neobundle_root) || v:version < 702
-  " NeoBundleが存在しない、もしくはVimのバージョンが古い場合はプラグインを一切読み込まない
-  let s:noplugin = 1
-else
-  if has('vim_starting')
-    set rtp+=$GOROOT/misc/vim
-    exe "set rtp+=" . s:neobundle_root
-    exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
-  endif
-  call neobundle#rc(s:bundle_root)
-
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  "}}}
-  " ##plugin {{{2
-  NeoBundle 'Shougo/neocomplcache'
-  NeoBundleLazy 'Shougo/unite.vim', { 'autoload' : { 'commands' : ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir'] } }
-  NeoBundle 'ujihisa/unite-colorscheme'
-  NeoBundle 'ujihisa/unite-font'
-  NeoBundleLazy 'Shougo/vimfiler.vim', {
-        \ 'autoload': {
-        \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
-        \   'mappings': ['<Plug>(vimfiler_switch)'],
-        \   'explorer': 1,
-        \ }}
-  NeoBundle 'Shougo/vimproc', {
-        \ 'build' : {
-        \   'mac' : 'make -f make_mac.mak',
-        \   'unix' : 'make -f make_unix.mak',
-        \ }}
-  NeoBundleLazy 'Shougo/neosnippet', { 'autoload': {'insert': 1 } }
-  NeoBundle 'altercation/vim-colors-solarized'
-  NeoBundle 'mhinz/vim-startify'
-  NeoBundle 'nathanaelkane/vim-indent-guides'
-  NeoBundle 'itchyny/lightline.vim'
-  NeoBundle 'scrooloose/syntastic'
-  NeoBundle 'Tacahilo/vim-foldtext'
-  NeoBundle 'tpope/vim-markdown.git'
-  NeoBundle 'thinca/vim-quickrun'
-  NeoBundle 'tpope/vim-surround'
-  NeoBundle 'kana/vim-smartinput'
-  NeoBundle 'tomtom/tcomment_vim'
-  NeoBundle 'Align'
-  NeoBundle 'tpope/vim-fugitive'
-  NeoBundle 'majutsushi/tagbar', {
-        \ 'autload': {
-        \   'commands': ['TagbarToggle'],
-        \ },
-        \ 'build': {
-        \   'mac': 'brew install ctags',
-        \ } }
-  " perl
-  NeoBundleLazy 'vim-perl/vim-perl', { 'autoload' : { 'filetypes': ['perl'] } }
-  NeoBundleLazy 'hotchpotch/perldoc-vim', { 'autoload': { 'filetype': ['perl'] } }
-  " ruby
-  NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
-  NeoBundleLazy 'tpope/vim-rails', { 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
-  NeoBundleLazy 'skwp/vim-rspec', { 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } } "RBENV_VERSION=system sudo gem install hpricot
-  NeoBundleLazy 'rhysd/unite-ruby-require.vim', { 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
-  NeoBundleLazy 'rhysd/neco-ruby-keyword-args', { 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
-  " python
-  NeoBundleLazy 'nvie/vim-flake8', {
-        \ 'autoload': { 'filetypes': ['python'] },
-        \ 'build': {
-        \   'mac': ['pip install flake8'],
-        \   'unix': ['pip install flake8'],
-        \ }}
-  " html/css
-  NeoBundle 'mattn/emmet-vim'
-  NeoBundle 'othree/html5.vim'
-  NeoBundle 'cakebaker/scss-syntax.vim'
-  NeoBundle 'hail2u/vim-css3-syntax'
-  "other
-  NeoBundle 'rodjek/vim-puppet',
-  NeoBundle 'kchmck/vim-coffee-script'
-  NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
-  NeoBundle 'joker1007/vim-markdown-quote-syntax'
-  NeoBundle 'csexton/jekyll.vim'
-  NeoBundle 'glidenote/memolist.vim'
-  NeoBundle 'fuenor/qfixgrep'
-  NeoBundle 'mattn/sonictemplate-vim'
-
-  NeoBundleCheck
+if has('vim_starting')
+  set rtp+=~/.vim/bundle/neobundle.vim/
+  set rtp+=$GOROOT/misc/vim
+  exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
 endif
 
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+"}}}
+" ##plugin {{{2
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+  \   'mac' : 'make -f make_mac.mak',
+  \   'unix' : 'make -f make_unix.mak',
+  \ }}
+NeoBundleLazy 'Shougo/neocomplete.vim', {
+  \ "autoload": {"insert": 1}}
+NeoBundleLazy 'Shougo/unite.vim', {
+  \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'ujihisa/unite-font'
+NeoBundleLazy 'Shougo/vimfiler.vim', {
+  \ 'autoload': {
+  \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
+  \   'mappings': ['<Plug>(vimfiler_switch)'],
+  \   'explorer': 1,
+  \ }}
+NeoBundleLazy 'Shougo/neosnippet', {
+  \ 'autoload': {'insert': 1}}
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Tacahilo/vim-foldtext'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'Align'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundleLazy 'vim-perl/vim-perl', {
+  \ 'autoload': {'filetypes': ['perl']}}
+NeoBundleLazy 'c9s/perlomni.vim', {
+  \ 'autoload': {'filetypes': ['perl']}}
+NeoBundleLazy 'vim-ruby/vim-ruby', {
+  \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
+NeoBundleLazy 'nvie/vim-flake8', {
+  \ 'autoload': {'filetypes': ['python']}}
+NeoBundleLazy 'mattn/emmet-vim', {
+  \ 'autoload': {'filetypes': ['html']}}
+NeoBundleLazy 'rodjek/vim-puppet', {
+  \ 'autoload': {'filetypes': ['puppet']}}
+NeoBundleLazy 'tpope/vim-markdown.git', {
+  \ 'autoload': {'filetypes': ['markdown']}}
+NeoBundle 'csexton/jekyll.vim'
+NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'mattn/sonictemplate-vim'
+
 filetype plugin indent on
+NeoBundleCheck
 " }}}
 " }}}
 
@@ -102,36 +74,32 @@ augroup filetypedetect
   autocmd! BufNewFile,BufRead *.tt setf tt2html
 augroup END
 "}}}
-" ##Encode {{{2
+" ##Encode and Files{{{2
 set encoding=utf-8
 set fileencoding=utf-8
-"}}}
-" ##File {{{2
-set hidden "ファイル変更中でも他のファイルを開けるようにする
-set autoread "ファイル内容が変更されると自動読み込みする
-"}}}
-" ##Backup {{{2
-set backupdir=$HOME/.backup/vim "バックアップディレクトリを指定する
-set browsedir=buffer "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
-set directory=$HOME/.backup/vim "スワップファイルディレクトリを指定する
-set history=10000 "履歴保存数
+set hidden
+set autoread
+set backupdir=$HOME/.backup/vim
+set browsedir=buffer
+set directory=$HOME/.backup/vim
+set history=10000
 "}}}
 " ##Search {{{2
-set incsearch "インクリメンタルサーチを行う
-set hlsearch "検索結果をハイライトする
-set ignorecase "検索時に文字の大小を区別しない
-set smartcase "検索時に大文字を含んでいたら大小を区別する
-set wrapscan "検索をファイルの先頭へループする
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wrapscan
 "}}}
 " ##Input {{{2
-set cindent "C言語のインデントに従って自動インデントを行う
-set expandtab "<Tab>の代わりに<Space>を挿入する
-set shiftwidth=2 "行頭での<Tab>の幅
-set tabstop=2 "行頭以外での<Tab>の幅
-set softtabstop=2 "expandtabで<Tab>が対応する<Space>の数
+set cindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set backspace=indent,eol,start
-set whichwrap=b,s,h,l,<,>,[,] "カーソルを行頭、行末で止まらないようにする
-set clipboard=unnamed "クリップボードを利用する
+set whichwrap=b,s,h,l,<,>,[,]
+set clipboard=unnamed
 "}}}
 " ##keymaps {{{2
 " http://avr.paslog.jp/article/2496343.html
@@ -183,59 +151,47 @@ set guifontwide=RictyForPowerline-Regular
 "}}}
 
 " #Plug-in {{{1
-" ##NeoComplecache {{{2
-set completeopt=menuone "補完候補が１つだけでも表示
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_smart_case=1 " 大文字が入力されるまで大文字小文字の区別を無視
-let g:neocomplcache_enable_underbar_completion=1 " スネークケースの補完を有効化
-let g:neocomplcache_enable_camel_case_completion=1 " キャメルケースの補完を有効化
-let g:neocomplcache_max_list=10 " ポップアップメニューで表示される候補の数
-let g:neocomplcache_min_syntax_length=3 " シンタックスをキャッシュするときの最小文字長
-inoremap <expr><S-TAB> pumvisible() ? "\<Up>"   : "\<S-TAB>"
-
-" 改行、Deleteキーで補完ウィンドウを閉じる
-function! s:my_cr_func()
-  return pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
-endfunction
-
+" ##NeoComplete {{{2
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 inoremap <silent> <CR> <C-R>=<SID>my_cr_func()<CR>
-""inoremap <expr><C-h> neocomplcache#smart_close_popup() . ”\<C-h>”
-" 現在選択している候補を確定します
-inoremap <expr><C-y> neocomplcache#close_popup()
-" 現在選択している候補をキャンセルし、ポップアップを閉じます
-inoremap <expr><C-e> neocomplcache#cancel_popup()
-inoremap <expr><C-g> neocomplcache#undo_completion()
-let g:neocomplcache_ctags_arguments_list = {
-      \ 'perl' : '-R -h ".pm"'
-      \ }
-let g:neocomplcache_dictionary_filetype_lists = {
-      \ 'default' : '',
-      \ 'perl'    : $HOME . '/.vim/dict/perl.dict',
-      \ 'php'     : $HOME . '/.vim/dict/php.dict',
-      \ }
-"}}}
-" ##NeoComplecache_Snippets {{{2
-"http://kazuph.hateblo.jp/entry/2013/01/19/193745"
-let g:neocomplcache_snippets_dir='~/.vim/snippets' " snippetの配置場所
+function! s:my_cr_func()
+  return pumvisible() ? neocomplete#smart_close_popup() : "\<CR>"
+endfunction
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
+
+" ##NeoSnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
-
-" SuperTab like snippets behavior.
+xmap <C-k> <Plug>(neosnippet_expand_target)
 imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 "}}}
 " ##unite.vim {{{2
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR> "バッファ一覧
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR> "ファイル一覧
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR> "レジスタ一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR> "最近使用したファイル一覧
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR> "常用セット
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR> "全部乗せ
+" grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
+nnoremap <silent> ,ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> ,uc :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 "ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
@@ -248,12 +204,8 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "}}}
 " ##syntastic {{{2
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_enable_highlighting=1
 let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_zsh_checkers=['zsh']
+let g:syntastic_python_checkers=['flake8']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -268,10 +220,7 @@ let g:surround_custom_mapping.ruby = {
 " }}}
 " ##vim-indent-guides {{{2
 let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_color_change_percent=10
 let g:indent_guides_guide_size=1
-let g:indent_guides_start_level=1
-let g:indent_guides_space_guides=1
 "}}}
 " ##vim-quickrun {{{2
 let g:quickrun_config = {}
@@ -281,9 +230,7 @@ let g:quickrun_config._={
       \  'outputter/buffer/split': ':botright',
       \  'hook/time/enable': '1'
       \}
-let g:quickrun_config['ruby.rspec'] = {
-      \  'command': 'rspec',
-      \}
+let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 "}}}
 " ##VimFiler {{{2
@@ -322,7 +269,6 @@ let g:memolist_path = "~/memo"
 let g:memolist_memo_date = "%Y-%m-%d %H:%M"
 let g:memolist_memo_date = "%D %T"
 let g:memolist_prompt_tags = 1
-let g:memolist_qfixgrep = 1
 let g:memolist_vimfiler = 1
 map ,mn  :MemoNew<CR>
 map ,ml  :MemoList<CR>
@@ -386,10 +332,6 @@ function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
 " }}}
-" ##other plugins {{{2
-let g:unite_source_ruby_require_ruby_command='$HOME/.rbenv/shims/ruby'
-nmap <Leader>t :TagbarToggle<CR>
-"}}}
 "}}}
 
 " vim: foldmethod=marker
