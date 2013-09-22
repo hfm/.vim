@@ -23,6 +23,8 @@ NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'ujihisa/unite-font'
+NeoBundle 'hewes/unite-gtags'
+NeoBundle 'tsukkee/unite-tag'
 NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ 'autoload': {
   \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
