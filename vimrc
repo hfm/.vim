@@ -63,6 +63,7 @@ NeoBundleLazy 'rodjek/vim-puppet', {
   \ 'autoload': {'filetypes': ['puppet']}}
 NeoBundleLazy 'tpope/vim-markdown.git', {
   \ 'autoload': {'filetypes': ['markdown']}}
+NeoBundle 'othree/html5.vim'
 NeoBundle 'csexton/jekyll.vim'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'mattn/sonictemplate-vim'
