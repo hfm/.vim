@@ -126,19 +126,19 @@ colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-syntax enable " シンタックスカラーリングを設定する
-set number " 行番号を表示する
-set title " 編集中のファイル名を表示する
-set showcmd " 入力中のコマンドを表示する
-set ruler " 座標を表示する
-set list " タブ、行末等の不可視文字を表示する
-set showmatch   " 閉じ括弧の入力時に対応する括弧を表示する
-set matchtime=3 " showmatchの表示時間
-set listchars=eol:$,tab:>\ ,extends:< " listで表示される文字のフォーマットを指定する
-set laststatus=2 " ステータスラインを常に表示する
+syntax enable
+set number
+set title
+set showcmd
+set ruler
+set list
+set showmatch
+set matchtime=3
+set listchars=eol:$,tab:>\ ,extends:<
+set laststatus=2
 
-set cursorline " カーソル行をハイライト
 " カレントウィンドウにのみ罫線を引く
+set cursorline
 augroup cch
   autocmd! cch
   autocmd WinLeave * set nocursorline
@@ -161,7 +161,7 @@ set guifontwide=RictyForPowerline-Regular
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#sources#syntax#min_keyword_length = 2
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 inoremap <silent> <CR> <C-R>=<SID>my_cr_func()<CR>
 function! s:my_cr_func()
