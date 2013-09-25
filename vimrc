@@ -25,6 +25,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'ujihisa/unite-font'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ 'autoload': {
   \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
@@ -109,15 +110,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 "}}}
 " ##keymaps {{{2
-" http://avr.paslog.jp/article/2496343.html
-nnoremap <Space>.  :<C-u>edit $MYVIMRC<CR>
-nnoremap <Space>,  :<C-u>source $MYVIMRC<CR>
-
-"" 挿入モード中に'Ctr-*'でコマンドモードでの移動・削除を可能にする
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-noremap <Leader><c-w> :silent ! start chrome %<CR>
-
 "" for perl
 inoremap <C-d> $
 inoremap <C-a> @
@@ -185,16 +177,17 @@ endif
 " ##unite.vim {{{2
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
-nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
-nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> ,us :<C-u>Unite colorscheme -auto-preview<Cr>
+nnoremap <silent> ,b :<C-u>Unite buffer<CR>
+nnoremap <silent> ,f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> ,r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,m :<C-u>Unite file_mru<CR>
+nnoremap <silent> ,u :<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> ,l :<C-u>Unite location_list<CR>
+nnoremap <silent> ,s :<C-u>Unite colorscheme -auto-preview<Cr>
 " grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
-nnoremap <silent> ,ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> ,uc :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
@@ -213,7 +206,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "}}}
 " ##syntastic {{{2
 let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers=['flake8']
+let g:syntastic_always_populate_loc_list = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
