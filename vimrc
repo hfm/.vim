@@ -42,6 +42,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Tacahilo/vim-foldtext'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-auto-save'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Align'
@@ -110,6 +111,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 "}}}
 " ##keymaps {{{2
+nnoremap go :<C-u>call append('.', '')<CR>
+nnoremap gO :normal! O<ESC>j
 "" for perl
 inoremap <C-d> $
 inoremap <C-a> @
@@ -333,6 +336,7 @@ function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
 " }}}
+let g:auto_save = 1
 "}}}
 
 " vim: foldmethod=marker
