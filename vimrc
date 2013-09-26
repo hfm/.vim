@@ -45,6 +45,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-auto-save'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'Align'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'vim-perl/vim-perl', {
@@ -335,6 +337,12 @@ endfunction
 function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
+" }}}
+" ##textobj-multiblock {{{2
+omap ab <Plug>(textobj-multiblock-a)
+omap ib <Plug>(textobj-multiblock-i)
+vmap ab <Plug>(textobj-multiblock-a)
+vmap ib <Plug>(textobj-multiblock-i)
 " }}}
 let g:auto_save = 1
 "}}}
