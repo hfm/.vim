@@ -346,6 +346,7 @@ vmap ab <Plug>(textobj-multiblock-a)
 vmap ib <Plug>(textobj-multiblock-i)
 " }}}
 let g:auto_save = 1
+nnoremap - :Switch<cr>
 "}}}
 
 " vim: foldmethod=marker
