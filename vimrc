@@ -48,6 +48,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'Align'
+NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
