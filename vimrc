@@ -113,6 +113,7 @@ set softtabstop=2
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
+set nf=""
 "}}}
 " ##keymaps {{{2
 nnoremap go :<C-u>call append('.', '')<CR>
