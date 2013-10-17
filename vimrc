@@ -53,6 +53,7 @@ NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
