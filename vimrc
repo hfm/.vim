@@ -41,12 +41,15 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Tacahilo/vim-foldtext'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-surround'
+NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'vim-auto-save'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-operator-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'thinca/vim-textobj-between'
+NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -219,14 +222,24 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 "}}}
-" ##vim-surround {{{2
-let g:surround_custom_mapping = {}
-let g:surround_custom_mapping.ruby = {
-      \ '-':  "<% \r %>",
-      \ '=':  "<%= \r %>",
-      \ '#':  "#{\r}",
-      \ }
-" }}}
+" ##vim-operator-surround {{{2
+" operator mappings
+map <silent>sa <Plug>(operator-surround-append)
+map <silent>sd <Plug>(operator-surround-delete)
+map <silent>sr <Plug>(operator-surround-replace)
+
+" delete or replace most inner surround
+" if you use vim-textobj-multiblock
+nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+
+" if you use vim-textobj-anyblock
+nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-anyblock-a)
+nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
+
+" if you use vim-textobj-between
+nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
+nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 " ##vim-indent-guides {{{2
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
