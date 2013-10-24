@@ -41,7 +41,6 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Tacahilo/vim-foldtext'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'vim-auto-save'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'tomtom/tcomment_vim'
@@ -50,9 +49,9 @@ NeoBundle 'kana/vim-operator-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'rhysd/vim-textobj-anyblock'
+NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'vim-perl/vim-perl', {
@@ -217,7 +216,7 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "}}}
 " ##syntastic {{{2
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 let g:syntastic_always_populate_loc_list = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -235,8 +234,8 @@ nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
 nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
 
 " if you use vim-textobj-anyblock
-nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-anyblock-a)
-nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
+nmap <silent>sda <Plug>(operator-surround-delete)<Plug>(textobj-anyblock-a)
+nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 
 " if you use vim-textobj-between
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
