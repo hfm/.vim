@@ -284,11 +284,11 @@ let g:jekyll_post_created = "%Y-%m-%d %H:%M"
 let g:jekyll_prompt_categories = "true"
 " }}}
 " ##memolist {{{2
+let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/memo"
-let g:memolist_memo_date = "%Y-%m-%d %H:%M"
-let g:memolist_memo_date = "%D %T"
 let g:memolist_prompt_tags = 1
-let g:memolist_vimfiler = 1
+let g:memolist_unite = 1
+let g:memolist_unite_option = "-auto-preview"
 map ,mn  :MemoNew<CR>
 map ,ml  :MemoList<CR>
 map ,mg  :MemoGrep<CR>
