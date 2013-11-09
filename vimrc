@@ -21,11 +21,10 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {
   \ "autoload": {"insert": 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'ujihisa/unite-font'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'osyo-manga/unite-quickfix'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ 'autoload': {
   \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
@@ -34,7 +33,6 @@ NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ }}
 NeoBundleLazy 'Shougo/neosnippet', {
   \ 'autoload': {'insert': 1}}
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'itchyny/lightline.vim'
@@ -68,7 +66,7 @@ NeoBundleLazy 'nvie/vim-flake8', {
   \ 'autoload': {'filetypes': ['python']}}
 NeoBundleLazy 'mattn/emmet-vim', {
   \ 'autoload': {'filetypes': ['html']}}
-NeoBundleLazy 'rodjek/vim-puppet', {
+NeoBundleLazy 'https://github.com/puppetlabs/puppet-syntax-vim', {
   \ 'autoload': {'filetypes': ['puppet']}}
 NeoBundleLazy 'tpope/vim-markdown.git', {
   \ 'autoload': {'filetypes': ['markdown']}}
@@ -83,6 +81,39 @@ NeoBundleCheck
 " }}}
 
 " #Preferences {{{1
+" ##Display {{{2
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
+set number
+set title
+set showcmd
+set ruler
+set list
+set showmatch
+set matchtime=3
+set listchars=eol:$,tab:>\ ,extends:<
+set laststatus=2
+
+set cursorline
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+
+hi clear CursorLine
+hi CursorLine gui=underline
+hi CursorLine ctermbg=black guibg=black
+
+if has('mac')
+  set guifont=RictyForPowerline-Regular
+  set guifontset=RictyForPowerline-Regular
+  set guifontwide=RictyForPowerline-Regular
+endif
+"}}}
 " ##Snippets and Dict {{{2
 augroup filetypedetect
   autocmd! BufNewFile,BufRead Gemfile,*.rake,Vagrantfile,Brewfile set filetype=ruby
@@ -118,45 +149,12 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nf=""
 "}}}
-" ##keymaps {{{2
+" ##Keymaps {{{2
 nnoremap go :<C-u>call append('.', '')<CR>
 nnoremap gO :normal! O<ESC>j
 "" for perl
 inoremap <C-d> $
 inoremap <C-a> @
-"}}}
-" ##Display {{{2
-colorscheme solarized
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-syntax enable
-set number
-set title
-set showcmd
-set ruler
-set list
-set showmatch
-set matchtime=3
-set listchars=eol:$,tab:>\ ,extends:<
-set laststatus=2
-
-" カレントウィンドウにのみ罫線を引く
-set cursorline
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter,BufRead * set cursorline
-augroup END
-
-hi clear CursorLine
-hi CursorLine gui=underline
-hi CursorLine ctermbg=black guibg=black
-nnoremap <Leader>c :<C-u>setlocal cursorline!<CR>
-
-set guifont=RictyForPowerline-Regular
-set guifontset=RictyForPowerline-Regular
-set guifontwide=RictyForPowerline-Regular
 "}}}
 "}}}
 
@@ -195,7 +193,6 @@ nnoremap <silent> ,r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,m :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,u :<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> ,l :<C-u>Unite location_list<CR>
-nnoremap <silent> ,s :<C-u>Unite colorscheme -auto-preview<Cr>
 " grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
