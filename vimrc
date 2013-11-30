@@ -1,8 +1,7 @@
 " #NeoBundle {{{1
 " ##setup {{{2
-set nocompatible
-
 if has('vim_starting')
+  set nocompatible
   set rtp+=~/.vim/bundle/neobundle.vim/
   set rtp+=$GOROOT/misc/vim
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
@@ -130,7 +129,8 @@ set backupdir=$HOME/.backup/vim
 set browsedir=buffer
 set directory=$HOME/.backup/vim
 set history=10000
-"}}}
+set noswapfile
+ "}}}
 " ##Search {{{2
 set incsearch
 set hlsearch
