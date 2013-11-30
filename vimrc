@@ -163,14 +163,15 @@ inoremap <C-a> @
 let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
-let g:neocomplete#sources#syntax#min_keyword_length=2
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+let g:neocomplete#sources#syntax#min_keyword_length=3
+let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
 inoremap <silent> <CR> <C-R>=<SID>my_cr_func()<CR>
 function! s:my_cr_func()
-  return pumvisible() ? neocomplete#smart_close_popup() : "\<CR>"
+  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 " ##NeoSnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
