@@ -171,7 +171,6 @@ function! s:my_cr_func()
 endfunction
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 " ##NeoSnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
