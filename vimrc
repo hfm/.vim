@@ -17,13 +17,9 @@ NeoBundle 'Shougo/vimproc', {
   \   'unix' : 'make -f make_unix.mak',
   \ }}
 NeoBundleLazy 'Shougo/neocomplete.vim', {
-  \ "autoload": {"insert": 1}}
+  \ "autoload": {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundle 'hewes/unite-gtags'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'osyo-manga/unite-quickfix'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ 'autoload': {
   \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
@@ -32,32 +28,33 @@ NeoBundleLazy 'Shougo/vimfiler.vim', {
   \ }}
 NeoBundleLazy 'Shougo/neosnippet', {
   \ 'autoload': {'insert': 1}}
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Tacahilo/vim-foldtext'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'vim-auto-save'
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kana/vim-operator-user'
-NeoBundle 'osyo-manga/vim-textobj-multiblock'
-NeoBundle 'thinca/vim-textobj-between'
-NeoBundle 'rhysd/vim-textobj-anyblock'
-NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'Tacahilo/vim-foldtext'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'hewes/unite-gtags'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kana/vim-operator-user'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'osyo-manga/unite-quickfix'
+NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'rhysd/vim-operator-surround'
+NeoBundle 'rhysd/vim-textobj-anyblock'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-textobj-between'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'vim-auto-save'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'c9s/perlomni.vim', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'y-uuki/unite-perl-module.vim', {
-  \ 'autoload': {'filetypes': ['perl']}}
-NeoBundleLazy 'y-uuki/perl-local-lib-path.vim', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
   \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
@@ -65,14 +62,8 @@ NeoBundleLazy 'nvie/vim-flake8', {
   \ 'autoload': {'filetypes': ['python']}}
 NeoBundleLazy 'mattn/emmet-vim', {
   \ 'autoload': {'filetypes': ['html']}}
-NeoBundleLazy 'https://github.com/puppetlabs/puppet-syntax-vim', {
+NeoBundleLazy 'puppetlabs/puppet-syntax-vim', {
   \ 'autoload': {'filetypes': ['puppet']}}
-NeoBundleLazy 'tpope/vim-markdown.git', {
-  \ 'autoload': {'filetypes': ['markdown']}}
-NeoBundle 'othree/html5.vim'
-NeoBundle 'csexton/jekyll.vim'
-NeoBundle 'glidenote/memolist.vim'
-NeoBundle 'mattn/sonictemplate-vim'
 
 filetype plugin indent on
 NeoBundleCheck
@@ -96,17 +87,6 @@ set matchtime=3
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 
-set cursorline
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter,BufRead * set cursorline
-augroup END
-
-hi clear CursorLine
-hi CursorLine gui=underline
-hi CursorLine ctermbg=black guibg=black
-
 if has('mac')
   set guifont=RictyForPowerline-Regular
   set guifontset=RictyForPowerline-Regular
@@ -115,7 +95,7 @@ endif
 "}}}
 " ##Snippets and Dict {{{2
 augroup filetypedetect
-  autocmd! BufNewFile,BufRead Gemfile,*.rake,Vagrantfile,Brewfile set filetype=ruby
+  autocmd! BufNewFile,BufRead Gemfile,*.rake set filetype=ruby
   autocmd! BufNewFile,BufRead *.psgi,*.t   set filetype=perl
   autocmd! BufNewFile,BufRead *.tt setf tt2html
 augroup END
@@ -184,8 +164,9 @@ if has('conceal')
 endif
 "}}}
 " ##unite.vim {{{2
-let g:unite_enable_ignore_case = 1
-let g:unite_enable_smart_case = 1
+let g:unite_enable_ignore_case=1
+let g:unite_enable_smart_case=1
+let g:unite_enable_split_vertically=1
 nnoremap <silent> ,b :<C-u>Unite buffer<CR>
 nnoremap <silent> ,f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
@@ -196,21 +177,6 @@ nnoremap <silent> ,l :<C-u>Unite location_list<CR>
 " grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
-
-"ウィンドウを分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-"ウィンドウを縦に分割して開く
-au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
-"ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "}}}
 " ##syntastic {{{2
 let g:syntastic_check_on_open=0
@@ -276,13 +242,6 @@ function! s:my_action.func(candidates)
 endfunction
 call unite#custom_action('file', 'my_vsplit', s:my_action)
 "}}}
-" ##jekyll{{{2
-let g:jekyll_path = "~/Documents/blog"
-let g:jekyll_post_published = "false"
-let g:jekyll_prompt_tags = "true"
-let g:jekyll_post_created = "%Y-%m-%d %H:%M"
-let g:jekyll_prompt_categories = "true"
-" }}}
 " ##memolist {{{2
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/memo"
@@ -295,7 +254,6 @@ map ,mg  :MemoGrep<CR>
 " }}}
 " ##lightline {{{2
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
