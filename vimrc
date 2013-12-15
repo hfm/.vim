@@ -52,10 +52,6 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
-NeoBundleLazy 'c9s/perlomni.vim', {
-  \ 'autoload': {'filetypes': ['perl']}}
-NeoBundleLazy 'y-uuki/unite-perl-module.vim', {
-  \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
   \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
 NeoBundleLazy 'nvie/vim-flake8', {
@@ -151,6 +147,12 @@ function! s:my_cr_func()
 endfunction
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " ##NeoSnippet
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
