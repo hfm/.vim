@@ -18,6 +18,8 @@ NeoBundle 'Shougo/vimproc', {
   \ }}
 NeoBundleLazy 'Shougo/neocomplete.vim', {
   \ "autoload": {'insert': 1}}
+NeoBundleLazy 'Shougo/neosnippet', {
+  \ 'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundleLazy 'Shougo/vimfiler.vim', {
@@ -26,8 +28,6 @@ NeoBundleLazy 'Shougo/vimfiler.vim', {
   \   'mappings': ['<Plug>(vimfiler_switch)'],
   \   'explorer': 1,
   \ }}
-NeoBundleLazy 'Shougo/neosnippet', {
-  \ 'autoload': {'insert': 1}}
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Tacahilo/vim-foldtext'
@@ -179,7 +179,7 @@ nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 "}}}
 " ##syntastic {{{2
 let g:syntastic_check_on_open=0
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
