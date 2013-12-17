@@ -31,7 +31,6 @@ NeoBundleLazy 'Shougo/neosnippet', {
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Tacahilo/vim-foldtext'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'itchyny/lightline.vim'
@@ -70,9 +69,7 @@ NeoBundleCheck
 " ##Display {{{2
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+colorscheme default
 set number
 set title
 set showcmd
