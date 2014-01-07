@@ -79,6 +79,7 @@ set showmatch
 set matchtime=3
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
+set ambiwidth=double
 
 if has('mac')
   set guifont=RictyForPowerline-Regular
