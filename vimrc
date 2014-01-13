@@ -22,12 +22,6 @@ NeoBundleLazy 'Shougo/neosnippet', {
   \ 'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundleLazy 'Shougo/vimfiler.vim', {
-  \ 'autoload': {
-  \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
-  \   'mappings': ['<Plug>(vimfiler_switch)'],
-  \   'explorer': 1,
-  \ }}
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Tacahilo/vim-foldtext'
@@ -49,6 +43,7 @@ NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
@@ -218,30 +213,13 @@ let g:quickrun_config._={
 let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 "}}}
-" ##VimFiler {{{2
-let g:vimfiler_as_default_explorer = 1
-nnoremap <F2> :VimFiler -buffer-name=explorer -split -winwidth=50 -toggle -no-quit<Cr>
-autocmd! FileType vimfiler call g:my_vimfiler_settings()
-function! g:my_vimfiler_settings()
-  nmap     <buffer><expr><Cr> vimfiler#smart_cursor_map("\<Plug>(vimfiler_expand_tree)", "\<Plug>(vimfiler_edit_file)")
-  nnoremap <buffer>s          :call vimfiler#mappings#do_action('my_split')<Cr>
-  nnoremap <buffer>v          :call vimfiler#mappings#do_action('my_vsplit')<Cr>
-endfunction
-
-let s:my_action = { 'is_selectable' : 1 }
-function! s:my_action.func(candidates)
-  wincmd p
-  exec 'split '. a:candidates[0].action__path
-endfunction
-call unite#custom_action('file', 'my_split', s:my_action)
-
-let s:my_action = { 'is_selectable' : 1 }
-function! s:my_action.func(candidates)
-  wincmd p
-  exec 'vsplit '. a:candidates[0].action__path
-endfunction
-call unite#custom_action('file', 'my_vsplit', s:my_action)
-"}}}
+" ##ctrlp {{{2
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$|vendor/ruby',
+  \ 'file': '\v\.(so)$',
+  \ }
+" }}}
 " ##memolist {{{2
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/memo"
