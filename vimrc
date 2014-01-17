@@ -3,7 +3,7 @@
 if has('vim_starting')
   set nocompatible
   set rtp+=~/.vim/bundle/neobundle.vim/
-  set rtp+=$GOROOT/misc/vim
+  set rtp+=$GOROOT/libexec/misc/vim
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
 endif
 
@@ -117,7 +117,6 @@ set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nf=""
-set completeopt=menu,preview
 "}}}
 " ##Keymaps {{{2
 nnoremap go :<C-u>call append('.', '')<CR>
