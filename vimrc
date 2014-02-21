@@ -1,5 +1,4 @@
-" #NeoBundle {{{1
-" ##setup {{{2
+" #NeoBundle
 if has('vim_starting')
   set nocompatible
   set rtp+=~/.vim/bundle/neobundle.vim/
@@ -9,8 +8,8 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-"}}}
-" ##plugin {{{2
+
+" ##plugin
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \   'mac' : 'make -f make_mac.mak',
@@ -26,7 +25,7 @@ NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'Tacahilo/vim-foldtext'
+" NeoBundle 'Tacahilo/vim-foldtext'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'itchyny/lightline.vim'
@@ -46,6 +45,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'suan/vim-instant-markdown'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
@@ -59,11 +59,9 @@ NeoBundleLazy 'puppetlabs/puppet-syntax-vim', {
 
 filetype plugin indent on
 NeoBundleCheck
-" }}}
-" }}}
 
-" #Preferences {{{1
-" ##Display {{{2
+" #Preferences
+" ##Display
 syntax enable
 set background=dark
 colorscheme default
@@ -83,15 +81,15 @@ if has('mac')
   set guifontset=RictyForPowerline-Regular
   set guifontwide=RictyForPowerline-Regular
 endif
-"}}}
-" ##Snippets and Dict {{{2
+
+" ##Snippets and Dict
 augroup filetypedetect
   autocmd! BufNewFile,BufRead Gemfile,*.rake set filetype=ruby
   autocmd! BufNewFile,BufRead *.psgi,*.t   set filetype=perl
   autocmd! BufNewFile,BufRead *.tt setf tt2html
 augroup END
-"}}}
-" ##Encode and Files{{{2
+
+" ##Encode and Files
 set encoding=utf-8
 set fileencoding=utf-8
 set hidden
@@ -101,15 +99,15 @@ set browsedir=buffer
 set directory=$HOME/.backup/vim
 set history=10000
 set noswapfile
- "}}}
-" ##Search {{{2
+ 
+" ##Search
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 set wrapscan
-"}}}
-" ##Input {{{2
+
+" ##Input
 set cindent
 set expandtab
 set shiftwidth=2
@@ -119,18 +117,16 @@ set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nf=""
-"}}}
-" ##Keymaps {{{2
+
+" ##Keymaps
 nnoremap go :<C-u>call append('.', '')<CR>
 nnoremap gO :normal! O<ESC>j
 "" for perl
 inoremap <C-d> $
 inoremap <C-a> @
-"}}}
-"}}}
 
-" #Plug-in {{{1
-" ##NeoComplete {{{2
+" #Plug-in
+" ##NeoComplete
 let g:acp_enableAtStartup=0
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_smart_case=1
@@ -159,8 +155,8 @@ smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : 
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-"}}}
-" ##unite.vim {{{2
+
+" ##unite.vim
 let g:unite_enable_ignore_case=1
 let g:unite_enable_smart_case=1
 let g:unite_enable_split_vertically=1
@@ -174,15 +170,15 @@ nnoremap <silent> ,l :<C-u>Unite location_list<CR>
 " grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-"}}}
-" ##syntastic {{{2
+
+" ##syntastic
 let g:syntastic_check_on_open=0
 let g:syntastic_always_populate_loc_list=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-"}}}
-" ##vim-operator-surround {{{2
+
+" ##vim-operator-surround
 " operator mappings
 map <silent>sa <Plug>(operator-surround-append)
 map <silent>sd <Plug>(operator-surround-delete)
@@ -200,11 +196,11 @@ nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 " if you use vim-textobj-between
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
-" ##vim-indent-guides {{{2
+" ##vim-indent-guides
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
-"}}}
-" ##vim-quickrun {{{2
+
+" ##vim-quickrun
 let g:quickrun_config = {}
 let g:quickrun_config._={
       \  'runner': 'vimproc',
@@ -214,15 +210,15 @@ let g:quickrun_config._={
       \}
 let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-"}}}
-" ##ctrlp {{{2
+
+" ##ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$|vendor/ruby',
   \ 'file': '\v\.(so)$',
   \ }
-" }}}
-" ##memolist {{{2
+
+" ##memolist
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/memo"
 let g:memolist_prompt_tags = 1
@@ -231,8 +227,8 @@ let g:memolist_unite_option = "-auto-preview"
 map ,mn  :MemoNew<CR>
 map ,ml  :MemoList<CR>
 map ,mg  :MemoGrep<CR>
-" }}}
-" ##lightline {{{2
+
+" ##lightline
 let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
@@ -288,18 +284,20 @@ endfunction
 function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
-" }}}
-" ##textobj-multiblock {{{2
+
+" ##textobj-multiblock
 omap ab <Plug>(textobj-multiblock-a)
 omap ib <Plug>(textobj-multiblock-i)
 vmap ab <Plug>(textobj-multiblock-a)
 vmap ib <Plug>(textobj-multiblock-i)
-" }}}
+
+" ##instant_markdown
+" gem install redcarpet
+" npm -g install instant-markdown-d
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_slow = 1
+autocmd BufRead,BufNewFile *.mkd  setfiletype markdown
+autocmd BufRead,BufNewFile *.md  setfiletype markdown
+
 let g:auto_save = 1
 nnoremap - :Switch<cr>
-"}}}
-
-" vim: foldmethod=marker
-" vim: foldcolumn=3
-" vim: foldlevel=1
-" vim: foldtext=Foldtext_base()
