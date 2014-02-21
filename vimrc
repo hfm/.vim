@@ -85,8 +85,9 @@ endif
 " ##Snippets and Dict
 augroup filetypedetect
   autocmd! BufNewFile,BufRead Gemfile,*.rake set filetype=ruby
-  autocmd! BufNewFile,BufRead *.psgi,*.t   set filetype=perl
-  autocmd! BufNewFile,BufRead *.tt setf tt2html
+  autocmd! BufNewFile,BufRead *.psgi,*.t     set filetype=perl
+  autocmd! BufNewFile,BufRead *.mkd,*.md     set filetype=markdown
+  autocmd! BufNewFile,BufRead *.tt           set filetype=tt2html
 augroup END
 
 " ##Encode and Files
@@ -296,8 +297,6 @@ vmap ib <Plug>(textobj-multiblock-i)
 " npm -g install instant-markdown-d
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
-autocmd BufRead,BufNewFile *.mkd  setfiletype markdown
-autocmd BufRead,BufNewFile *.md  setfiletype markdown
 
 let g:auto_save = 1
 nnoremap - :Switch<cr>
