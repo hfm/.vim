@@ -47,8 +47,6 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'rizzatti/funcoo.vim'
-NeoBundle 'rizzatti/dash.vim'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
