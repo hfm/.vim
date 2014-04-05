@@ -45,9 +45,9 @@ NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
-NeoBundle 'vim-endwise'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
