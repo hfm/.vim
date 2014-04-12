@@ -19,7 +19,7 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {
   \ "autoload": {'insert': 1}}
 NeoBundleLazy 'Shougo/neosnippet', {
   \ 'autoload': {'insert': 1}}
-NeoBundleLazy 'Tacahilo/neosnippet-snippets', {
+NeoBundleLazy 'tacahilo/neosnippet-snippets', {
   \ 'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
