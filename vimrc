@@ -19,7 +19,7 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {
   \ "autoload": {'insert': 1}}
 NeoBundleLazy 'Shougo/neosnippet', {
   \ 'autoload': {'insert': 1}}
-NeoBundleLazy 'Tacahilo/neosnippet-snippets', {
+NeoBundleLazy 'tacahilo/neosnippet-snippets', {
   \ 'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
@@ -27,11 +27,13 @@ NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 " NeoBundle 'Tacahilo/vim-foldtext'
 NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'gtags.vim'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'osyo-manga/unite-quickfix'
@@ -39,14 +41,13 @@ NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vim-auto-save'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'rizzatti/dash.vim'
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
