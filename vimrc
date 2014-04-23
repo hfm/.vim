@@ -23,6 +23,8 @@ NeoBundleLazy 'tacahilo/neosnippet-snippets', {
   \ 'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
+NeoBundleLazy 'Shougo/neomru.vim', {
+  \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 " NeoBundle 'Tacahilo/vim-foldtext'
