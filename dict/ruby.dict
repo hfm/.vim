@@ -1,16 +1,3 @@
-!=
-!~
-**
-+@
--@
-<<
-<=
-<=>
-==
-===
-=~
->=
->>
 APOP
 ASCIIZ
 AdditiveExpr
@@ -55,8 +42,6 @@ SP_Z
 String
 UnaryExpr
 UnionExpr
-[]
-[]=
 _PermaLink?
 __callee__
 __dir__
