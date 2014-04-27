@@ -146,6 +146,15 @@ endfunction
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
 
+" Dictionary
+let $VIMHOME = $HOME . '/.vim'
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'ruby' : $VIMHOME.'/dict/ruby.dict',
+    \ 'perl' : $VIMHOME.'/dict/perl.dict',
+    \ 'php' : $VIMHOME.'/dict/php.dict'
+\ }
+
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
