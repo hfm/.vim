@@ -45,6 +45,7 @@ NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
@@ -69,7 +70,7 @@ NeoBundleCheck
 "" Display
 syntax enable
 set background=dark
-colorscheme default
+colorscheme solarized
 set number
 set title
 set showcmd
