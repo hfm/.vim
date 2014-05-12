@@ -50,6 +50,7 @@ NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'vim-auto-save'
 NeoBundle 'clones/vim-zsh'
 NeoBundleLazy 'vim-perl/vim-perl', {
