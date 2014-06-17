@@ -43,6 +43,7 @@ NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'glidenote/serverspec-snippets'
 NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -170,6 +171,7 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+let g:neosnippet#snippets_directory='~/.vim/bundle/serverspec-snippets'
 
 if has('conceal')
   set conceallevel=2 concealcursor=i
