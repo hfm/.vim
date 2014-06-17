@@ -235,7 +235,7 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 "" ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$|vendor/ruby',
+  \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$',
   \ 'file': '\v\.(so)$',
   \ }
 
