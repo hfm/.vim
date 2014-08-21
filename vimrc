@@ -55,6 +55,12 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-auto-save'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundleLazy 'lambdalisue/vim-gista', {
+    \ 'autoload': {
+    \    'commands': ['Gista'],
+    \    'mappings': '<Plug>(gista-',
+    \    'unite_sources': 'gista',
+    \}}
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
@@ -321,3 +327,4 @@ let g:instant_markdown_slow = 1
 
 let g:auto_save = 1
 nnoremap - :Switch<cr>
+let g:gista#github_user = 'tacahilo'
