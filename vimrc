@@ -27,7 +27,6 @@ NeoBundleLazy 'Shougo/neomru.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'clones/vim-zsh'
 NeoBundle 'ekalinin/Dockerfile.vim'
