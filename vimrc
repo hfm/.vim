@@ -40,7 +40,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
@@ -229,9 +229,9 @@ nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 " if you use vim-textobj-between
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
-"" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
+"" indentLine
+let g:indentLine_faster = 1
+let g:indentLine_color_term = 232
 
 "" vim-quickrun
 let g:quickrun_config = {}
