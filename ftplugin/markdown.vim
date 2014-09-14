@@ -2,9 +2,6 @@
 " todoリストを簡単に入力する
 abbreviate tl - [ ]
 
-" 入れ子のリストを折りたたむ
-setlocal foldmethod=indent
-
 " todoリストのon/offを切り替える
 nnoremap <buffer> <Space> :call ToggleCheckbox()<CR>
 vnoremap <buffer> <Space> :call ToggleCheckbox()<CR>

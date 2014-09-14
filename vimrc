@@ -120,6 +120,7 @@ set browsedir=buffer
 set directory=$HOME/.backup/vim
 set history=10000
 set noswapfile
+set nofoldenable
  
 "" Search
 set incsearch
