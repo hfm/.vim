@@ -56,6 +56,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-auto-save'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'rcmdnk/vim-markdown'
 NeoBundleLazy 'lambdalisue/vim-gista', {
     \ 'autoload': {
     \    'commands': ['Gista'],
