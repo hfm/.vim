@@ -25,9 +25,9 @@ NeoBundleLazy 'Shougo/unite.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundleLazy 'Shougo/neomru.vim', {
   \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundle 'Align'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'clones/vim-zsh'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'glidenote/memolist.vim'
@@ -35,12 +35,12 @@ NeoBundle 'glidenote/serverspec-snippets'
 NeoBundle 'gtags.vim'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
@@ -56,6 +56,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-auto-save'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'rcmdnk/vim-markdown'
 NeoBundleLazy 'lambdalisue/vim-gista', {
     \ 'autoload': {
     \    'commands': ['Gista'],
@@ -122,6 +123,7 @@ set browsedir=buffer
 set directory=$HOME/.backup/vim
 set history=10000
 set noswapfile
+set nofoldenable
  
 "" Search
 set incsearch
@@ -231,9 +233,9 @@ nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 " if you use vim-textobj-between
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
-"" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
+"" indentLine
+let g:indentLine_faster = 1
+let g:indentLine_color_term = 232
 
 "" vim-quickrun
 let g:quickrun_config = {}
