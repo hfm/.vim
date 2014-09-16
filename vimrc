@@ -70,6 +70,8 @@ NeoBundleLazy 'nvie/vim-flake8', {
   \ 'autoload': {'filetypes': ['python']}}
 NeoBundleLazy 'mattn/emmet-vim', {
   \ 'autoload': {'filetypes': ['html']}}
+NeoBundleLazy 'rodjek/vim-puppet', {
+  \ 'autoload': {'filetypes': ['puppet']}}
 NeoBundleLazy 'puppetlabs/puppet-syntax-vim', {
   \ 'autoload': {'filetypes': ['puppet']}}
 
