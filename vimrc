@@ -233,9 +233,17 @@ nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 " if you use vim-textobj-between
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
+
 "" indentLine
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 232
+
+"" easy-align
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
 
 "" vim-quickrun
 let g:quickrun_config = {}
