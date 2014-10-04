@@ -6,7 +6,7 @@ if has('vim_starting')
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" plugin
@@ -76,6 +76,7 @@ NeoBundleLazy 'rodjek/vim-puppet', {
 NeoBundleLazy 'puppetlabs/puppet-syntax-vim', {
   \ 'autoload': {'filetypes': ['puppet']}}
 
+call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
