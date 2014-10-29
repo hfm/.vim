@@ -134,7 +134,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set wrapscan
-nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "" Input
 set cindent
