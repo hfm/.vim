@@ -259,7 +259,8 @@ let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
 "" ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+" set wildignore+=**/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$',
   \ 'file': '\v\.(so)$',
