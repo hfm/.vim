@@ -147,6 +147,13 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nf=""
 
+" https://gist.github.com/rbtnn/8540338 http://d.hatena.ne.jp/hyuki/20140122/vim#c
+augroup auto_comment_off
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
+augroup END
+
 "" Keymaps
 nnoremap go :<C-u>call append('.', '')<CR>
 nnoremap gO :normal! O<ESC>j
