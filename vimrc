@@ -97,11 +97,13 @@ set title
 set showcmd
 set ruler
 set list
-set showmatch
-set matchtime=3
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 set ambiwidth=double
+
+set showmatch
+set matchtime=3
+runtime macros/matchit.vim
 
 if has('mac')
   set guifont=RictyForPowerline-Regular
