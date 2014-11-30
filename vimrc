@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " NeoBundle
 if has('vim_starting')
   set nocompatible
