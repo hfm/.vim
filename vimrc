@@ -150,7 +150,7 @@ set softtabstop=2
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
-set nf=""
+set nrformats=""
 
 " https://gist.github.com/rbtnn/8540338 http://d.hatena.ne.jp/hyuki/20140122/vim#c
 augroup auto_comment_off
