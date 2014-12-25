@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " NeoBundle
 if has('vim_starting')
   set nocompatible
@@ -58,6 +60,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-auto-save'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'tpope/vim-liquid'
 NeoBundle 'rcmdnk/vim-markdown'
 NeoBundleLazy 'lambdalisue/vim-gista', {
     \ 'autoload': {
@@ -96,11 +99,14 @@ set title
 set showcmd
 set ruler
 set list
-set showmatch
-set matchtime=3
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 set ambiwidth=double
+set pumheight=10
+
+set showmatch
+set matchtime=1
+runtime macros/matchit.vim
 
 if has('mac')
   set guifont=RictyForPowerline-Regular
@@ -145,7 +151,14 @@ set softtabstop=2
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
-set nf=""
+set nrformats=""
+
+" https://gist.github.com/rbtnn/8540338 http://d.hatena.ne.jp/hyuki/20140122/vim#c
+augroup auto_comment_off
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
+augroup END
 
 "" Keymaps
 nnoremap go :<C-u>call append('.', '')<CR>
@@ -349,6 +362,7 @@ let g:instant_markdown_slow = 1
 
 "" vim-markdown
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter=1
 
 let g:auto_save = 1
 nnoremap - :Switch<cr>
