@@ -360,6 +360,7 @@ let g:instant_markdown_slow = 1
 
 "" vim-markdown
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter=1
 
 let g:auto_save = 1
 nnoremap - :Switch<cr>
