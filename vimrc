@@ -150,6 +150,7 @@ set nf=""
 "" Keymaps
 nnoremap go :<C-u>call append('.', '')<CR>
 nnoremap gO :normal! O<ESC>j
+nnoremap Y y$
 "" for perl
 inoremap <C-d> $
 inoremap <C-a> @
