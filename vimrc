@@ -105,7 +105,7 @@ set ambiwidth=double
 set pumheight=10
 
 set showmatch
-set matchtime=3
+set matchtime=1
 runtime macros/matchit.vim
 
 if has('mac')
