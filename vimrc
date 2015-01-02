@@ -252,6 +252,10 @@ nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 
+"" easy-motion
+let g:EasyMotion_do_mapping = 0
+nmap t <Plug>(easymotion-s2)
+
 "" indentLine
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 232
