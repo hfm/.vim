@@ -255,6 +255,8 @@ nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 "" easy-motion
 let g:EasyMotion_do_mapping = 0
 nmap t <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 "" indentLine
 let g:indentLine_faster = 1
