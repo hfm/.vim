@@ -103,7 +103,7 @@ set list
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 set ambiwidth=double
-set pumheight=10
+set pumheight=20
 
 set showmatch
 set matchtime=1
