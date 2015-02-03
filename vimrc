@@ -92,9 +92,9 @@ NeoBundleCheck
 syntax enable
 set background=dark
 colorscheme hybrid
-hi CursorLineNr ctermbg=30 ctermfg=0
-set cursorline
-hi clear CursorLine
+" hi CursorLineNr ctermbg=30 ctermfg=0
+" set cursorline
+" hi clear CursorLine
 
 set number
 set title
