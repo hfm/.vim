@@ -64,6 +64,7 @@ NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-auto-save'
+NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', {
     \ 'autoload': {
@@ -376,3 +377,7 @@ let g:vim_markdown_frontmatter=1
 let g:auto_save = 1
 nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
+
+"" vimwiki
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax':'markdown', 'ext':'.md'}]
