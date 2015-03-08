@@ -63,7 +63,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'vim-auto-save'
+NeoBundle '907th/vim-auto-save'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', {
@@ -377,7 +377,12 @@ let g:instant_markdown_slow = 1
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter=1
 
+"" vim-auto-save
 let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
 nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
 
