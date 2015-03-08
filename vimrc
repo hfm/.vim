@@ -229,11 +229,13 @@ nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 
 "" syntastic
-let g:syntastic_check_on_open=0
-let g:syntastic_always_populate_loc_list=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 
