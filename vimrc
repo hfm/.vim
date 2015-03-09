@@ -32,6 +32,7 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'autofmt'
 NeoBundle 'clones/vim-zsh'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'evanmiller/nginx-vim-syntax'
@@ -63,7 +64,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'vim-auto-save'
+NeoBundle '907th/vim-auto-save'
+NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', {
     \ 'autoload': {
@@ -228,12 +230,15 @@ nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 
 "" syntastic
-let g:syntastic_check_on_open=0
-let g:syntastic_always_populate_loc_list=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 
 "" vim-operator-surround
 " operator mappings
@@ -373,6 +378,15 @@ let g:instant_markdown_slow = 1
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter=1
 
+"" vim-auto-save
 let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
 nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
+
+"" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax':'markdown', 'ext':'.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
