@@ -4,4 +4,3 @@
 
 # Vim
 /bundle/*
-!/bundle/neobundle.vim
