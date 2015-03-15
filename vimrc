@@ -361,6 +361,11 @@ function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
 
+"" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_global_ext = 0
+
 "" textobj-multiblock
 omap ab <Plug>(textobj-multiblock-a)
 omap ib <Plug>(textobj-multiblock-i)
@@ -385,7 +390,3 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
-
-"" vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax':'markdown', 'ext':'.vimwiki.md'}]
-let g:vimwiki_ext2syntax = {'.vimwiki.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
