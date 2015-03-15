@@ -2,7 +2,10 @@ scriptencoding utf-8
 
 " NeoBundle
 if has('vim_starting')
-  set nocompatible
+  if &compatible
+    set nocompatible
+  endif
+
   set rtp+=~/.vim/bundle/neobundle.vim/
   set rtp+=$GOROOT/misc/vim
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
@@ -12,11 +15,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" plugin
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \   'mac' : 'make -f make_mac.mak',
+NeoBundle 'Shougo/vimproc', { 'build' : {
+  \   'mac'   : 'make -f make_mac.mak',
   \   'linix' : 'make',
-  \   'unix' : 'gmake',
+  \   'unix'  : 'gmake',
   \ }}
 NeoBundleLazy 'Shougo/neocomplete.vim', {
   \ "autoload": {'insert': 1}}
@@ -68,11 +70,10 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundleLazy 'lambdalisue/vim-gista', {
-    \ 'autoload': {
-    \    'commands': ['Gista'],
-    \    'mappings': '<Plug>(gista-',
-    \    'unite_sources': 'gista',
+NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
+    \  'commands': ['Gista'],
+    \  'mappings': '<Plug>(gista-',
+    \  'unite_sources': 'gista',
     \}}
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
@@ -96,10 +97,6 @@ NeoBundleCheck
 syntax enable
 set background=dark
 colorscheme hybrid
-" hi CursorLineNr ctermbg=30 ctermfg=0
-" set cursorline
-" hi clear CursorLine
-
 set number
 set title
 set showcmd
@@ -139,7 +136,7 @@ set directory=$HOME/.backup/vim
 set history=10000
 set noswapfile
 set nofoldenable
- 
+
 "" Search
 set incsearch
 set hlsearch
