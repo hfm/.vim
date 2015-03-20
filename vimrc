@@ -25,32 +25,34 @@ NeoBundleLazy 'Shougo/neosnippet', {'autoload': {'insert': 1}}
 NeoBundleLazy 'tacahilo/neosnippet-snippets', {'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
+" NeoBundle 'rcmdnk/vim-markdown'
+NeoBundle '907th/vim-auto-save'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'autofmt'
+NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'clones/vim-zsh'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'evanmiller/nginx-vim-syntax'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'open-browser.vim'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'glidenote/serverspec-snippets'
 NeoBundle 'gtags.vim'
 NeoBundle 'hewes/unite-gtags'
-NeoBundle 'justinmk/vim-dirvish'
-NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'justinmk/vim-dirvish'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kannokanno/previm'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
+NeoBundle 'open-browser.vim'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
-NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'rhysd/vim-textobj-anyblock'
 NeoBundle 'scrooloose/syntastic'
@@ -64,7 +66,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle '907th/vim-auto-save'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
@@ -378,8 +379,8 @@ let g:instant_markdown_autostart = 0
 let g:instant_markdown_slow = 1
 
 "" vim-markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_frontmatter=1
+" let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_frontmatter=1
 
 "" vim-auto-save
 let g:auto_save = 1
