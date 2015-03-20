@@ -103,6 +103,10 @@ set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 set ambiwidth=double
 set pumheight=20
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=8
+endif
 
 set showmatch
 set matchtime=1
