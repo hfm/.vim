@@ -20,16 +20,11 @@ NeoBundle 'Shougo/vimproc', { 'build' : {
   \   'linix' : 'make',
   \   'unix'  : 'gmake',
   \ }}
-NeoBundleLazy 'Shougo/neocomplete.vim', {
-  \ "autoload": {'insert': 1}}
-NeoBundleLazy 'Shougo/neosnippet', {
-  \ 'autoload': {'insert': 1}}
-NeoBundleLazy 'tacahilo/neosnippet-snippets', {
-  \ 'autoload': {'insert': 1}}
-NeoBundleLazy 'Shougo/unite.vim', {
-  \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundleLazy 'Shougo/neomru.vim', {
-  \ 'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
+NeoBundleLazy 'Shougo/neocomplete.vim', {"autoload": {'insert': 1}}
+NeoBundleLazy 'Shougo/neosnippet', {'autoload': {'insert': 1}}
+NeoBundleLazy 'tacahilo/neosnippet-snippets', {'autoload': {'insert': 1}}
+NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
+NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
