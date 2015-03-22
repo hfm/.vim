@@ -64,7 +64,6 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
