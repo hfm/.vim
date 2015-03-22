@@ -387,7 +387,11 @@ let g:instant_markdown_slow = 1
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
+let g:gista#auto_yank_after_save = 0
+let g:gista#auto_yank_after_post = 0
+
+" Ignore unite-mode and markdown
+let g:extra_whitespace_ignored_filetypes = ['unite', 'mkd', 'md']
