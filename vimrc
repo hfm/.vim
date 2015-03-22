@@ -67,10 +67,10 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
-    \  'commands': ['Gista'],
-    \  'mappings': '<Plug>(gista-',
-    \  'unite_sources': 'gista',
-    \}}
+      \  'commands': ['Gista'],
+      \  'mappings': '<Plug>(gista-',
+      \  'unite_sources': 'gista',
+      \}}
 NeoBundleLazy 'vim-perl/vim-perl', {
   \ 'autoload': {'filetypes': ['perl']}}
 NeoBundleLazy 'vim-ruby/vim-ruby', {
