@@ -213,9 +213,12 @@ if has('conceal')
 endif
 
 "" unite.vim
-let g:unite_enable_ignore_case=1
-let g:unite_enable_smart_case=1
-let g:unite_enable_split_vertically=1
+call unite#custom#profile('default', 'context', {
+      \ 'start_insert': 1,
+      \ 'direction': 'botright',
+      \ 'ignorecase': 1,
+      \ 'smartcase': 1,
+      \})
 nnoremap <silent> ,b :<C-u>Unite buffer<CR>
 nnoremap <silent> ,f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
