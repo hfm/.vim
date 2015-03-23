@@ -56,14 +56,6 @@ if has('mac')
   set guifontwide=RictyForPowerline-Regular
 endif
 
-"" Filetype
-augroup filetypedetect
-  autocmd! BufNewFile,BufRead Gemfile,*.rake set filetype=ruby
-  autocmd! BufNewFile,BufRead *.psgi,*.t     set filetype=perl
-  autocmd! BufNewFile,BufRead *.mkd,*.md     set filetype=markdown
-  autocmd! BufNewFile,BufRead *.tt           set filetype=tt2html
-augroup END
-
 "" Encode and Files
 set encoding=utf-8
 set fileencoding=utf-8
