@@ -1,0 +1,96 @@
+# Sample:
+# [[plugins]]
+# repository =
+
+# Autocomplete and Snippets
+[[plugins]]
+repository = 'Shougo/neocomplete.vim'
+insert = 1
+
+[[plugins]]
+repository = 'Shougo/neosnippet'
+insert = 1
+
+[[plugins]]
+repository = 'tacahilo/neosnippet-snippets'
+depends = ['glidenote/serverspec-snippets', 'tacahilo/itamae-snippets']
+insert = 1
+filetypes = 'snippet'
+
+# Syntax
+[[plugins]]
+repository = 'evanmiller/nginx-vim-syntax'
+filetypes = 'nginx.conf'
+
+[[plugins]]
+repository = 'ekalinin/Dockerfile.vim'
+filetypes = 'Dockerfile'
+
+[[plugins]]
+repository ='cespare/vim-toml'
+filetypes = 'toml'
+
+# Markdown or texts
+[[plugins]]
+repository = 'gist:tacahilo/fda08ddb08cdd90c40f4'
+name = 'markdown.vim'
+script_type = 'syntax'
+filetypes = ['markdown', 'md']
+
+[[plugins]]
+repository = 'kannokanno/previm'
+filetypes = ['markdown', 'md', 'rst']
+depends = 'tyru/open-browser.vim'
+
+[[plugins]]
+repository = 'open-browser.vim'
+filetypes = ['markdown', 'md', 'rst']
+mappings = '<Plug>'
+functions = 'openbrowser#open'
+
+# Languages
+[[plugins]]
+repository = 'rodjek/vim-puppet'
+filetypes = 'puppet'
+
+[[plugins]]
+repository = 'mattn/emmet-vim'
+filetypes = 'html'
+
+[[plugins]]
+repository = 'nvie/vim-flake8'
+filetypes = 'python'
+#
+[[plugins]]
+repository = 'vim-ruby/vim-ruby'
+filetypes = ['ruby', 'eruby']
+
+[[plugins]]
+repository = 'vim-perl/vim-perl'
+filetypes = 'perl'
+
+# Development environments
+[[plugins]]
+repository = 'thinca/vim-quickrun'
+mappings = '<Plug>'
+
+## Operators
+[[plugins]]
+repository = 'kana/vim-operator-user'
+functions = 'operator#user#define'
+
+[[plugins]]
+repository = 'kana/vim-operator-replace'
+depends = 'vim-operator-user'
+mappings = [['nx', '<Plug>(operator-replace)']]
+
+[[plugins]]
+repository = 'rhysd/vim-operator-surround'
+depends = 'vim-operator-user'
+mappings = '<Plug>'
+
+## GitHub
+[[plugins]]
+repository = 'lambdalisue/vim-gista'
+mappings = '<Plug>(gista-'
+commands = 'Gista'

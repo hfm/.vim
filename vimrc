@@ -15,46 +15,21 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+if neobundle#has_cache()
+  NeoBundleLoadCache
+else
+  NeoBundleFetch 'Shougo/neobundle.vim'
 
-" plugin
-"" Load toml from "~/.vim/bundle.toml".
-call neobundle#load_toml('~/.vim/neobundle.toml', {'lazy' : 1})
-NeoBundle '907th/vim-auto-save'
-NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'autofmt'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'glidenote/memolist.vim'
-NeoBundle 'gtags.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'justinmk/vim-dirvish'
-NeoBundle 'kana/vim-operator-user'
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'osyo-manga/vim-textobj-multiblock'
-NeoBundle 'rhysd/vim-operator-surround'
-NeoBundle 'rhysd/vim-textobj-anyblock'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-textobj-between'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'vimwiki'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
-      \  'commands': ['Gista'],
-      \  'mappings': '<Plug>(gista-',
-      \  'unite_sources': 'gista',
-      \}}
+  call neobundle#load_toml('~/.vim/neobundle.toml')
+  call neobundle#load_toml('~/.vim/neobundlelazy.toml', {'lazy' : 1})
 
+  NeoBundleSaveCache
+endif
+
+NeoBundleLocal ~/.vim/bundle
 call neobundle#end()
 filetype plugin indent on
+
 NeoBundleCheck
 
 " Preferences
@@ -176,23 +151,6 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
-"" unite.vim
-call unite#custom#profile('default', 'context', {
-      \ 'direction': 'botright',
-      \ 'ignorecase': 1,
-      \ 'smartcase': 1,
-      \})
-nnoremap <silent> ,b :<C-u>Unite buffer<CR>
-nnoremap <silent> ,f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> ,r :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> ,m :<C-u>Unite file_mru<CR>
-nnoremap <silent> ,u :<C-u>Unite buffer file_mru<CR>
-nnoremap <silent> ,l :<C-u>Unite location_list<CR>
-" grep http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
-nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> ,c :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-
 "" syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -210,6 +168,12 @@ map <silent>sd <Plug>(operator-surround-delete)
 map <silent>sr <Plug>(operator-surround-replace)
 
 " delete or replace most inner surround
+"" textobj-multiblock
+omap ab <Plug>(textobj-multiblock-a)
+omap ib <Plug>(textobj-multiblock-i)
+vmap ab <Plug>(textobj-multiblock-a)
+vmap ib <Plug>(textobj-multiblock-i)
+
 " if you use vim-textobj-multiblock
 nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
 nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
@@ -251,22 +215,22 @@ let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
 "" ctrlp
-" set wildignore+=**/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$',
-  \ 'file': '\v\.(so)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
   \ }
+map ,b :CtrlPBuffer<CR>
 
 "" memolist
 let g:memolist_memo_suffix = "md"
 let g:memolist_path = "~/memo"
 let g:memolist_prompt_tags = 1
-let g:memolist_unite = 1
-let g:memolist_unite_option = "-auto-preview"
-map ,mn  :MemoNew<CR>
-map ,ml  :MemoList<CR>
-map ,mg  :MemoGrep<CR>
+let g:memolist_ex_cmd = 'CtrlP'
+map ,mn :MemoNew<CR>
+map ,ml :MemoList<CR>
+map ,mg :MemoGrep<CR>
 
 "" lightline
 let g:lightline = {
@@ -299,7 +263,6 @@ endfunction
 function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
         \ (&ft == 'vimfiler' ? vimfiler#get_status_string() : 
-        \  &ft == 'unite' ? unite#get_status_string() : 
         \  &ft == 'vimshell' ? substitute(b:vimshell.current_dir,expand('~'),'~','') : 
         \ '' != expand('%t') ? expand('%t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
@@ -330,12 +293,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 let g:vimwiki_global_ext = 0
 
-"" textobj-multiblock
-omap ab <Plug>(textobj-multiblock-a)
-omap ib <Plug>(textobj-multiblock-i)
-vmap ab <Plug>(textobj-multiblock-a)
-vmap ib <Plug>(textobj-multiblock-i)
-
 "" vim-auto-save
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
@@ -345,6 +302,3 @@ nnoremap - :Switch<cr>
 let g:gista#github_user = 'tacahilo'
 let g:gista#auto_yank_after_save = 0
 let g:gista#auto_yank_after_post = 0
-
-" Ignore unite-mode and markdown
-let g:extra_whitespace_ignored_filetypes = ['unite', 'mkd', 'md']

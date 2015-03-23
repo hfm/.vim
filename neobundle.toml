@@ -10,82 +10,68 @@ repository = 'Shougo/vimproc.vim'
   linux = 'make'
   unix = 'gmake'
 
-# Autocomplete and Snippets
+# Filer
 [[plugins]]
-repository = 'Shougo/neocomplete.vim'
-insert = 1
+repository = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-repository = 'Shougo/neosnippet'
-insert = 1
+repository = 'justinmk/vim-dirvish'
+
+# Productivities
+[[plugins]]
+repository = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
-repository = 'tacahilo/neosnippet-snippets'
-depends = ['glidenote/serverspec-snippets', 'tacahilo/itamae-snippets']
-insert = 1
-filetypes = 'snippet'
-
-# Syntax
-[[plugins]]
-repository = 'scrooloose/syntastic'
+repository = '907th/vim-auto-save'
 
 [[plugins]]
-repository = 'evanmiller/nginx-vim-syntax'
+repository = 'AndrewRadev/switch.vim'
 
 [[plugins]]
-repository = 'ekalinin/Dockerfile.vim'
+repository = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-repository ='cespare/vim-toml'
-filetypes = 'toml'
-
-# Markdown or texts
-[[plugins]]
-repository = 'gist:tacahilo/fda08ddb08cdd90c40f4'
-name = 'markdown.vim'
-script_type = 'syntax'
+repository = 'tomtom/tcomment_vim'
 
 [[plugins]]
-repository = 'kannokanno/previm'
-filetypes = ['markdown', 'md', 'rst']
-depends = 'tyru/open-browser.vim'
+repository = 'kana/vim-smartinput'
+depends = 'cohama/vim-smartinput-endwise'
 
 [[plugins]]
-repository = 'open-browser.vim'
-filetypes = ['markdown', 'md', 'rst']
-mappings = '<Plug>'
-functions = 'openbrowser#open'
-
-# Languages
-[[plugins]]
-repository = 'rodjek/vim-puppet'
-filetypes = 'puppet'
+repository = 'junegunn/vim-easy-align'
 
 [[plugins]]
-repository = 'mattn/emmet-vim'
-filetypes = 'html'
+repository = 'autofmt'
 
 [[plugins]]
-repository = 'nvie/vim-flake8'
-filetypes = 'python'
-#
+repository = 'tpope/vim-fugitive'
+
+## Display
 [[plugins]]
-repository = 'vim-ruby/vim-ruby'
-filetypes = ['ruby', 'eruby']
+repository = 'itchyny/lightline.vim'
 
 [[plugins]]
-repository = 'vim-perl/vim-perl'
-filetypes = 'perl'
-
-# Unite
-[[plugins]]
-repository = 'Shougo/unite.vim'
-depends = ['Shougo/neomru.vim', 'Shougo/unite-outline', 'osyo-manga/unite-quickfix', 'hewes/unite-gtags']
-
-  [plugins.commands]
-  name = 'Unite'
-  complete = 'customlist,unite#complete_source'
+repository = 'w0ng/vim-hybrid'
 
 [[plugins]]
-repository = 'Shougo/neomru.vim'
-filetypes = 'all'
+repository = 'Yggdroot/indentLine'
+
+## Text objects (textobj)
+[[plugins]]
+repository = 'kana/vim-textobj-user'
+
+[[plugins]]
+repository = 'rhysd/vim-textobj-anyblock'
+
+[[plugins]]
+repository = 'thinca/vim-textobj-between'
+
+[[plugins]]
+repository = 'osyo-manga/vim-textobj-multiblock'
+
+# Memo
+[[plugins]]
+repository = 'glidenote/memolist.vim'
+
+[[plugins]]
+repository = 'vimwiki'
