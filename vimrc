@@ -20,9 +20,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " plugin
 "" Load toml from "~/.vim/bundle.toml".
 call neobundle#load_toml('~/.vim/neobundle.toml', {'lazy' : 1})
-NeoBundleLazy 'Shougo/neocomplete.vim', {"autoload": {'insert': 1}}
-NeoBundleLazy 'Shougo/neosnippet', {'autoload': {'insert': 1}}
-NeoBundleLazy 'tacahilo/neosnippet-snippets', {'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle '907th/vim-auto-save'

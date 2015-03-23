@@ -5,3 +5,16 @@ repository = 'Shougo/vimproc.vim'
   mac = 'make -f make_mac.mak'
   linux = 'make'
   unix = 'gmake'
+
+[[plugins]]
+repository = 'Shougo/neocomplete.vim'
+insert = 1
+
+[[plugins]]
+repository = 'Shougo/neosnippet'
+insert = 1
+
+[[plugins]]
+repository = 'tacahilo/neosnippet-snippets'
+insert = 1
+
