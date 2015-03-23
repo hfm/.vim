@@ -39,3 +39,20 @@ repository = 'ekalinin/Dockerfile.vim'
 repository ='cespare/vim-toml'
 filetypes = 'toml'
 
+# Markdown or texts
+[[plugins]]
+repository = 'gist:tacahilo/fda08ddb08cdd90c40f4'
+name = 'markdown.vim'
+script_type = 'syntax'
+
+[[plugins]]
+repository = 'kannokanno/previm'
+filetypes = ['markdown', 'md', 'rst']
+depends = 'tyru/open-browser.vim'
+
+[[plugins]]
+repository = 'open-browser.vim'
+filetypes = ['markdown', 'md', 'rst']
+mappings = '<Plug>'
+functions = 'openbrowser#open'
+

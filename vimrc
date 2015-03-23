@@ -24,7 +24,6 @@ NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWith
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'gist:tacahilo/fda08ddb08cdd90c40f4', {'name': 'markdown.vim', 'script_type': 'syntax'}
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
@@ -39,10 +38,8 @@ NeoBundle 'justinmk/vim-dirvish'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kannokanno/previm'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'open-browser.vim'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
