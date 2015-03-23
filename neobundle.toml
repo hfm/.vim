@@ -1,0 +1,7 @@
+[[plugins]]
+repository = 'Shougo/vimproc.vim'
+
+  [plugins.build]
+  mac = 'make -f make_mac.mak'
+  linux = 'make'
+  unix = 'gmake'

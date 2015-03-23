@@ -17,12 +17,9 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"" plugin
-NeoBundle 'Shougo/vimproc', { 'build' : {
-  \   'mac'   : 'make -f make_mac.mak',
-  \   'linix' : 'make',
-  \   'unix'  : 'gmake',
-  \ }}
+" plugin
+"" Load toml from "~/.vim/bundle.toml".
+call neobundle#load_toml('~/.vim/neobundle.toml', {'lazy' : 1})
 NeoBundleLazy 'Shougo/neocomplete.vim', {"autoload": {'insert': 1}}
 NeoBundleLazy 'Shougo/neosnippet', {'autoload': {'insert': 1}}
 NeoBundleLazy 'tacahilo/neosnippet-snippets', {'autoload': {'insert': 1}}
