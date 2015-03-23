@@ -69,10 +69,14 @@ filetypes = ['ruby', 'eruby']
 repository = 'vim-perl/vim-perl'
 filetypes = 'perl'
 
-# Development environments
+# Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
 mappings = '<Plug>'
+
+[[plugins]]
+repository = 'mattn/benchvimrc-vim'
+commands = "BenchVimrc"
 
 ## Operators
 [[plugins]]
