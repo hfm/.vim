@@ -1,14 +1,12 @@
 " skip if vim-tiny or vim-small
 if !1 | finish | endif
 
-scriptencoding utf-8
+if &compatible
+  set nocompatible
+endif
 
 " NeoBundle
 if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
   set rtp+=~/.vim/bundle/neobundle.vim/
   set rtp+=$GOROOT/misc/vim
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
