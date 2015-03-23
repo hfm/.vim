@@ -1,3 +1,7 @@
+# Sample:
+# [[plugins]]
+# repository = 
+
 [[plugins]]
 repository = 'Shougo/vimproc.vim'
 
