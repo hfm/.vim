@@ -23,3 +23,9 @@ insert = 1
 repository = 'tacahilo/neosnippet-snippets'
 insert = 1
 
+[[plugins]]
+repository = 'glidenote/serverspec-snippets'
+
+[[plugins]]
+repository = 'tacahilo/itamae-snippets'
+
