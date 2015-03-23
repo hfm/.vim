@@ -212,7 +212,6 @@ endif
 
 "" unite.vim
 call unite#custom#profile('default', 'context', {
-      \ 'start_insert': 1,
       \ 'direction': 'botright',
       \ 'ignorecase': 1,
       \ 'smartcase': 1,
