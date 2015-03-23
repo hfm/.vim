@@ -28,12 +28,8 @@ NeoBundle 'gist:tacahilo/fda08ddb08cdd90c40f4', {'name': 'markdown.vim', 'script
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'cespare/vim-toml'
 NeoBundle 'autofmt'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'clones/vim-zsh'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'gtags.vim'
 NeoBundle 'hewes/unite-gtags'
@@ -51,14 +47,11 @@ NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'rhysd/vim-textobj-anyblock'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-textobj-between'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-liquid'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vimwiki'
 NeoBundle 'w0ng/vim-hybrid'
@@ -76,8 +69,6 @@ NeoBundleLazy 'nvie/vim-flake8', {
 NeoBundleLazy 'mattn/emmet-vim', {
   \ 'autoload': {'filetypes': ['html']}}
 NeoBundleLazy 'rodjek/vim-puppet', {
-  \ 'autoload': {'filetypes': ['puppet']}}
-NeoBundleLazy 'puppetlabs/puppet-syntax-vim', {
   \ 'autoload': {'filetypes': ['puppet']}}
 
 call neobundle#end()
@@ -362,16 +353,6 @@ omap ab <Plug>(textobj-multiblock-a)
 omap ib <Plug>(textobj-multiblock-i)
 vmap ab <Plug>(textobj-multiblock-a)
 vmap ib <Plug>(textobj-multiblock-i)
-
-"" instant_markdown
-" gem install redcarpet
-" npm -g install instant-markdown-d
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_slow = 1
-
-"" vim-markdown
-" let g:vim_markdown_folding_disabled = 1
-" let g:vim_markdown_frontmatter=1
 
 "" vim-auto-save
 let g:auto_save = 1

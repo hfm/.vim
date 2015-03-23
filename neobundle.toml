@@ -25,3 +25,17 @@ depends = ['glidenote/serverspec-snippets', 'tacahilo/itamae-snippets']
 insert = 1
 filetypes = 'snippet'
 
+# Syntax
+[[plugins]]
+repository = 'scrooloose/syntastic'
+
+[[plugins]]
+repository = 'evanmiller/nginx-vim-syntax'
+
+[[plugins]]
+repository = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
+repository ='cespare/vim-toml'
+filetypes = 'toml'
+
