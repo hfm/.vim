@@ -28,10 +28,9 @@ NeoBundleLazy 'Shougo/neosnippet', {'autoload': {'insert': 1}}
 NeoBundleLazy 'tacahilo/neosnippet-snippets', {'autoload': {'insert': 1}}
 NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-" NeoBundle 'rcmdnk/vim-markdown'
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'gist:tacahilo/fda08ddb08cdd90c40f4' " markdown syntax
+NeoBundle 'gist:tacahilo/fda08ddb08cdd90c40f4', {'name': 'markdown.vim', 'script_type': 'syntax'}
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
