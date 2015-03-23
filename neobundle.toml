@@ -1,6 +1,6 @@
 # Sample:
 # [[plugins]]
-# repository = 
+# repository =
 
 [[plugins]]
 repository = 'Shougo/vimproc.vim'
@@ -21,11 +21,7 @@ insert = 1
 
 [[plugins]]
 repository = 'tacahilo/neosnippet-snippets'
+depends = ['glidenote/serverspec-snippets', 'tacahilo/itamae-snippets']
 insert = 1
-
-[[plugins]]
-repository = 'glidenote/serverspec-snippets'
-
-[[plugins]]
-repository = 'tacahilo/itamae-snippets'
+filetypes = 'snippet'
 
