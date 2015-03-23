@@ -10,6 +10,7 @@ repository = 'Shougo/vimproc.vim'
   linux = 'make'
   unix = 'gmake'
 
+# Autocomplete and Snippets
 [[plugins]]
 repository = 'Shougo/neocomplete.vim'
 insert = 1
