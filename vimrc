@@ -34,6 +34,7 @@ NeoBundle 'gist:tacahilo/fda08ddb08cdd90c40f4', {'name': 'markdown.vim', 'script
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'cespare/vim-toml'
 NeoBundle 'autofmt'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'clones/vim-zsh'
