@@ -8,7 +8,7 @@ repository = 'Shougo/neocomplete.vim'
 insert = 1
 
 [[plugins]]
-repository = 'Shougo/neosnippet'
+repository = 'Shougo/neosnippet.vim'
 insert = 1
 
 [[plugins]]
