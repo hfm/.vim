@@ -77,3 +77,15 @@ filetypes = ['ruby', 'eruby']
 repository = 'vim-perl/vim-perl'
 filetypes = 'perl'
 
+# Unite
+[[plugins]]
+repository = 'Shougo/unite.vim'
+depends = ['Shougo/neomru.vim', 'Shougo/unite-outline', 'osyo-manga/unite-quickfix', 'hewes/unite-gtags']
+
+  [plugins.commands]
+  name = 'Unite'
+  complete = 'customlist,unite#complete_source'
+
+[[plugins]]
+repository = 'Shougo/neomru.vim'
+filetypes = 'all'

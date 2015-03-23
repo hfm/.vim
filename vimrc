@@ -20,18 +20,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " plugin
 "" Load toml from "~/.vim/bundle.toml".
 call neobundle#load_toml('~/.vim/neobundle.toml', {'lazy' : 1})
-NeoBundleLazy 'Shougo/unite.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
-NeoBundleLazy 'Shougo/neomru.vim', {'autoload': {'commands': ['Unite', 'UniteWithBufferDir', 'UniteWithCurrentDir']}}
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'autofmt'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'gtags.vim'
-NeoBundle 'hewes/unite-gtags'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'justinmk/vim-dirvish'
@@ -40,7 +36,6 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'rhysd/vim-operator-surround'
 NeoBundle 'rhysd/vim-textobj-anyblock'
