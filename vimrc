@@ -57,16 +57,6 @@ NeoBundleLazy 'lambdalisue/vim-gista', { 'autoload': {
       \  'mappings': '<Plug>(gista-',
       \  'unite_sources': 'gista',
       \}}
-NeoBundleLazy 'vim-perl/vim-perl', {
-  \ 'autoload': {'filetypes': ['perl']}}
-NeoBundleLazy 'vim-ruby/vim-ruby', {
-  \ 'autoload': {'filetypes': ['ruby', 'eruby']}}
-NeoBundleLazy 'nvie/vim-flake8', {
-  \ 'autoload': {'filetypes': ['python']}}
-NeoBundleLazy 'mattn/emmet-vim', {
-  \ 'autoload': {'filetypes': ['html']}}
-NeoBundleLazy 'rodjek/vim-puppet', {
-  \ 'autoload': {'filetypes': ['puppet']}}
 
 call neobundle#end()
 filetype plugin indent on

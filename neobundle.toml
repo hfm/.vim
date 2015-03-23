@@ -56,3 +56,24 @@ filetypes = ['markdown', 'md', 'rst']
 mappings = '<Plug>'
 functions = 'openbrowser#open'
 
+# Languages
+[[plugins]]
+repository = 'rodjek/vim-puppet'
+filetypes = 'puppet'
+
+[[plugins]]
+repository = 'mattn/emmet-vim'
+filetypes = 'html'
+
+[[plugins]]
+repository = 'nvie/vim-flake8'
+filetypes = 'python'
+#
+[[plugins]]
+repository = 'vim-ruby/vim-ruby'
+filetypes = ['ruby', 'eruby']
+
+[[plugins]]
+repository = 'vim-perl/vim-perl'
+filetypes = 'perl'
+
