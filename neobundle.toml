@@ -56,22 +56,21 @@ repository = 'w0ng/vim-hybrid'
 [[plugins]]
 repository = 'Yggdroot/indentLine'
 
-## Text objects (textobj)
-[[plugins]]
-repository = 'kana/vim-textobj-user'
-
-[[plugins]]
-repository = 'rhysd/vim-textobj-anyblock'
-
-[[plugins]]
-repository = 'thinca/vim-textobj-between'
-
-[[plugins]]
-repository = 'osyo-manga/vim-textobj-multiblock'
-
 # Memo
 [[plugins]]
 repository = 'glidenote/memolist.vim'
 
 [[plugins]]
 repository = 'vimwiki'
+
+# Text objects (textobj)
+[[plugins]]
+repository = 'kana/vim-textobj-user'
+
+[[plugins]]
+repository = 'rhysd/vim-textobj-anyblock'
+depends = 'vim-textobj-user'
+
+[[plugins]]
+repository = 'thinca/vim-textobj-between'
+depends = 'vim-textobj-user'

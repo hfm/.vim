@@ -25,6 +25,11 @@ else
 endif
 
 NeoBundleLocal ~/.vim/bundle
+
+if filereadable(expand('~/.vim/plugins.rc.vim'))
+  source ~/.vim/plugins.rc.vim
+endif
+
 call neobundle#end()
 filetype plugin indent on
 
@@ -47,7 +52,6 @@ set pumheight=20
 set showmatch
 set matchtime=1
 runtime macros/matchit.vim
-
 if has('mac')
   set guifont=RictyForPowerline-Regular
   set guifontset=RictyForPowerline-Regular
@@ -101,70 +105,6 @@ inoremap <C-d> $
 inoremap <C-a> @
 
 " Plug-in
-"" NeoComplete
-let g:acp_enableAtStartup=0
-let g:neocomplete#enable_at_startup=1
-let g:neocomplete#enable_smart_case=1
-let g:neocomplete#sources#syntax#min_keyword_length=3
-let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
-inoremap <silent> <CR> <C-R>=<SID>my_cr_func()<CR>
-function! s:my_cr_func()
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
-
-" Dictionary
-let $VIMHOME = $HOME . '/.vim'
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'ruby' : $VIMHOME.'/dict/ruby.dict',
-    \ 'perl' : $VIMHOME.'/dict/perl.dict',
-    \ 'php' : $VIMHOME.'/dict/php.dict'
-\ }
-
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-"" NeoSnippet
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-let g:neosnippet#snippets_directory='~/.vim/bundle/serverspec-snippets,~/.vim/bundle/itamae-snippets'
-
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-"" vim-operator-surround
-" operator mappings
-map <silent>sa <Plug>(operator-surround-append)
-map <silent>sd <Plug>(operator-surround-delete)
-map <silent>sr <Plug>(operator-surround-replace)
-
-" delete or replace most inner surround
-"" textobj-multiblock
-omap ab <Plug>(textobj-multiblock-a)
-omap ib <Plug>(textobj-multiblock-i)
-vmap ab <Plug>(textobj-multiblock-a)
-vmap ib <Plug>(textobj-multiblock-i)
-
-" if you use vim-textobj-multiblock
-nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
-nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
-
-" if you use vim-textobj-anyblock
-nmap <silent>sda <Plug>(operator-surround-delete)<Plug>(textobj-anyblock-a)
-nmap <silent>sra <Plug>(operator-surround-replace)<Plug>(textobj-anyblock-a)
-
-" if you use vim-textobj-between
-nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
-nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 
 "" easy-motion
 let g:EasyMotion_do_mapping = 0
@@ -182,103 +122,3 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
-
-"" vim-quickrun
-let g:quickrun_config = {}
-let g:quickrun_config._={
-      \  'runner': 'vimproc',
-      \  'runner/vimproc/updatetime': 60,
-      \  'outputter/buffer/split': ':botright',
-      \  'hook/time/enable': '1'
-      \}
-let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
-nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-
-"" ctrlp
-set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|bundle)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-map ,b :CtrlPBuffer<CR>
-
-"" memolist
-let g:memolist_memo_suffix = "md"
-let g:memolist_path = "~/memo"
-let g:memolist_prompt_tags = 1
-let g:memolist_ex_cmd = 'CtrlP'
-map ,mn :MemoNew<CR>
-map ,ml :MemoList<CR>
-map ,mg :MemoGrep<CR>
-
-"" lightline
-let g:lightline = {
-      \ 'mode_map': { 'c': 'NORMAL' },
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-      \ },
-      \ 'component_function': {
-      \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
-
-function! MyModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
-endfunction
-
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() : 
-        \  &ft == 'vimshell' ? substitute(b:vimshell.current_dir,expand('~'),'~','') : 
-        \ '' != expand('%t') ? expand('%t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-  return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head()) ? '⭠ '.fugitive#head() : ''
-endfunction
-
-function! MyFileformat()
-  return winwidth('.') > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth('.') > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth('.') > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-  return winwidth('.') > 60 ? lightline#mode() : ''
-endfunction
-
-"" vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-let g:vimwiki_global_ext = 0
-
-"" vim-auto-save
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-let g:auto_save_silent = 1
-
-nnoremap - :Switch<cr>
-let g:gista#github_user = 'tacahilo'
-let g:gista#auto_yank_after_save = 0
-let g:gista#auto_yank_after_post = 0

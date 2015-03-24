@@ -72,6 +72,7 @@ filetypes = 'perl'
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
+commands = 'Quickrun'
 mappings = '<Plug>'
 
 [[plugins]]
@@ -86,7 +87,7 @@ functions = 'operator#user#define'
 [[plugins]]
 repository = 'kana/vim-operator-replace'
 depends = 'vim-operator-user'
-mappings = [['nx', '<Plug>(operator-replace)']]
+mappings = [['nx', '<Plug>']]
 
 [[plugins]]
 repository = 'rhysd/vim-operator-surround'
