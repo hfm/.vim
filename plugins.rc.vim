@@ -85,4 +85,3 @@ let g:auto_save_silent = 1
 
 " switch.vim
 nnoremap - :Switch<cr>
-
