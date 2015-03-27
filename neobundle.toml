@@ -42,10 +42,6 @@ repository = 'AndrewRadev/switch.vim'
 [[plugins]]
 repository = 'tomtom/tcomment_vim'
 
-[[plugins]]
-repository = 'kana/vim-smartinput'
-depends = 'cohama/vim-smartinput-endwise'
-
 ## Git
 [[plugins]]
 repository = 'tpope/vim-fugitive'
