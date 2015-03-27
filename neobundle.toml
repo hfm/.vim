@@ -20,6 +20,10 @@ repository = 'justinmk/vim-dirvish'
 # Productivities
 ## Syntax, Coding rule
 [[plugins]]
+repository = 'osyo-manga/vim-watchdogs'
+depends = ['osyo-manga/shabadou.vim', 'jceb/vim-hier']
+
+[[plugins]]
 repository = 'autofmt'
 
 [[plugins]]

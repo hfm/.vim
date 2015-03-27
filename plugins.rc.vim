@@ -85,3 +85,15 @@ let g:auto_save_silent = 1
 
 " switch.vim
 nnoremap - :Switch<cr>
+
+" watchdogs.vim
+let g:quickrun_config["watchdogs_checker/puppet"] = {
+      \ "command" : "puppet-lint",
+      \ "exec"    : '%c %o %s:p',
+      \ }
+let g:quickrun_config["puppet/watchdogs_checker"] = {
+      \ "type" : "watchdogs_checker/puppet",
+      \ }
+
+let g:watchdogs_check_BufWritePost_enable = 1
+" watchdogs.vim の呼び出し
