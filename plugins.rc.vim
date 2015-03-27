@@ -87,6 +87,11 @@ let g:auto_save_silent = 1
 nnoremap - :Switch<cr>
 
 " watchdogs.vim
+let g:quickrun_config = {
+\   "ruby/watchdogs_checker" : {
+\       "type" : "watchdogs_checker/rubocop"
+\   }
+\}
 let g:quickrun_config["watchdogs_checker/puppet"] = {
       \ "command" : "puppet-lint",
       \ "exec"    : '%c %o %s:p',
