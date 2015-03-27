@@ -18,6 +18,12 @@ if neobundle#has_cache()
 else
   NeoBundleFetch 'Shougo/neobundle.vim'
 
+  NeoBundle 'Shougo/vimproc.vim', { 'build': {
+        \ 'mac'  : 'make -f make_mac.mak',
+        \ 'unix' : 'gmake',
+        \ 'linux': 'make',
+        \ }}
+
   call neobundle#load_toml('~/.vim/neobundle.toml')
   call neobundle#load_toml('~/.vim/neobundlelazy.toml', {'lazy' : 1})
 
