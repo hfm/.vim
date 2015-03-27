@@ -29,6 +29,11 @@ insert = 1
 
 # Syntax
 [[plugins]]
+repository = 'osyo-manga/vim-watchdogs'
+depends = ['osyo-manga/shabadou.vim', 'jceb/vim-hier']
+filetypes = 'all'
+
+[[plugins]]
 repository = 'evanmiller/nginx-vim-syntax'
 filetypes = 'nginx.conf'
 
