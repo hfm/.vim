@@ -24,9 +24,6 @@ repository = 'osyo-manga/vim-watchdogs'
 depends = ['osyo-manga/shabadou.vim', 'jceb/vim-hier']
 
 [[plugins]]
-repository = 'autofmt'
-
-[[plugins]]
 repository = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
