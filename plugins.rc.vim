@@ -96,4 +96,20 @@ let g:quickrun_config["puppet/watchdogs_checker"] = {
       \ }
 
 let g:watchdogs_check_BufWritePost_enable = 1
-" watchdogs.vim の呼び出し
+
+" easy-motion
+let g:EasyMotion_do_mapping = 0
+nmap t <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" indentLine
+let g:indentLine_faster = 1
+let g:indentLine_color_term = 232
+
+"" easy-align
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
