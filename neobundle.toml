@@ -18,17 +18,26 @@ repository = 'ctrlpvim/ctrlp.vim'
 repository = 'justinmk/vim-dirvish'
 
 # Productivities
+## Syntax, Coding rule
+[[plugins]]
+repository = 'autofmt'
+
+[[plugins]]
+repository = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repository = 'junegunn/vim-easy-align'
+
+## Cursor
 [[plugins]]
 repository = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
 repository = '907th/vim-auto-save'
 
+## Input Support
 [[plugins]]
 repository = 'AndrewRadev/switch.vim'
-
-[[plugins]]
-repository = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repository = 'tomtom/tcomment_vim'
@@ -37,12 +46,7 @@ repository = 'tomtom/tcomment_vim'
 repository = 'kana/vim-smartinput'
 depends = 'cohama/vim-smartinput-endwise'
 
-[[plugins]]
-repository = 'junegunn/vim-easy-align'
-
-[[plugins]]
-repository = 'autofmt'
-
+## Git
 [[plugins]]
 repository = 'tpope/vim-fugitive'
 
