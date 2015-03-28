@@ -89,10 +89,6 @@ repository = 'thinca/vim-quickrun'
 commands = 'Quickrun'
 mappings = '<Plug>'
 
-[[plugins]]
-repository = 'mattn/benchvimrc-vim'
-commands = "BenchVimrc"
-
 ## Operators
 [[plugins]]
 repository = 'kana/vim-operator-user'
