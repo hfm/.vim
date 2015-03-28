@@ -17,7 +17,6 @@ depends = ['glidenote/serverspec-snippets', 'tacahilo/itamae-snippets']
 insert = 1
 filetypes = 'snippet'
 
-# Productivities
 [[plugins]]
 repository = 'kana/vim-smartinput'
 depends = 'cohama/vim-smartinput-endwise'
