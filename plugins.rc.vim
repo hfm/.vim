@@ -64,14 +64,16 @@ if neobundle#tap('gista.vim')
   call neobundle#untap()
 endif
 
-"" memolist
-let g:memolist_memo_suffix = "md"
-let g:memolist_path = "~/memo"
-let g:memolist_prompt_tags = 1
-let g:memolist_ex_cmd = 'CtrlP'
-map ,mn :MemoNew<CR>
-map ,ml :MemoList<CR>
-map ,mg :MemoGrep<CR>
+if neobundle#tap('memolist.vim')
+  let g:memolist_memo_suffix = "md"
+  let g:memolist_path = "~/memo"
+  let g:memolist_prompt_tags = 1
+  let g:memolist_ex_cmd = 'CtrlP'
+  map ,mn :MemoNew<CR>
+  map ,ml :MemoList<CR>
+  map ,mg :MemoGrep<CR>
+  call neobundle#untap()
+endif
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]

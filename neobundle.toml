@@ -46,8 +46,6 @@ repository = 'w0ng/vim-hybrid'
 repository = 'Yggdroot/indentLine'
 
 # Memo
-[[plugins]]
-repository = 'glidenote/memolist.vim'
 
 [[plugins]]
 repository = 'vimwiki'

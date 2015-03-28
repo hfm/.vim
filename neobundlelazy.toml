@@ -58,6 +58,10 @@ filetypes = ['markdown', 'md', 'rst']
 mappings = '<Plug>'
 functions = 'openbrowser#open'
 
+[[plugins]]
+repository = 'glidenote/memolist.vim'
+commands = ['MemoNew', 'MemoList', 'MemoGrep']
+
 # Languages
 [[plugins]]
 repository = 'rodjek/vim-puppet'
