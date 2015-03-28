@@ -30,8 +30,6 @@ else
   NeoBundleSaveCache
 endif
 
-NeoBundleLocal ~/.vim/bundle
-
 if filereadable(expand('~/.vim/plugins.rc.vim'))
   source ~/.vim/plugins.rc.vim
 endif
