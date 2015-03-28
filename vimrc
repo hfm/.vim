@@ -20,8 +20,7 @@ else
 
   NeoBundle 'Shougo/vimproc.vim', { 'build': {
         \ 'mac'  : 'make -f make_mac.mak',
-        \ 'unix' : 'gmake',
-        \ 'linux': 'make',
+        \ 'unix' : 'make -f make_unix.mak',
         \ }}
 
   call neobundle#load_toml('~/.vim/neobundle.toml')
