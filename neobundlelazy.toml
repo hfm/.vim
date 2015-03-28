@@ -38,10 +38,6 @@ repository = 'evanmiller/nginx-vim-syntax'
 filetypes = 'nginx.conf'
 
 [[plugins]]
-repository = 'ekalinin/Dockerfile.vim'
-filetypes = 'Dockerfile'
-
-[[plugins]]
 repository ='cespare/vim-toml'
 filetypes = 'toml'
 
