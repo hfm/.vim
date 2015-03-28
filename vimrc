@@ -32,14 +32,12 @@ endif
 if filereadable(expand('~/.vim/plugins.rc.vim'))
   source ~/.vim/plugins.rc.vim
 endif
-
 call neobundle#end()
-filetype plugin indent on
 
+filetype plugin indent on
 NeoBundleCheck
 
-" Preferences
-"" Display
+" Display
 syntax enable
 set background=dark
 colorscheme hybrid
@@ -61,7 +59,7 @@ if has('mac')
   set guifontwide=RictyForPowerline-Regular
 endif
 
-"" Encode and Files
+" Encode and Files
 set encoding=utf-8
 set fileencoding=utf-8
 set hidden
@@ -73,7 +71,7 @@ set history=10000
 set noswapfile
 set nofoldenable
 
-"" Search
+" Search
 set incsearch
 set hlsearch
 set ignorecase
@@ -81,7 +79,7 @@ set smartcase
 set wrapscan
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-"" Input
+" Input
 set cindent
 set expandtab
 set shiftwidth=2
@@ -92,16 +90,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nrformats=""
 
-" https://gist.github.com/rbtnn/8540338 http://d.hatena.ne.jp/hyuki/20140122/vim#c
-augroup auto_comment_off
-  autocmd!
-  autocmd BufEnter * setlocal formatoptions-=r
-  autocmd BufEnter * setlocal formatoptions-=o
-augroup END
-
-"" Keymaps
-nnoremap go :<C-u>call append('.', '')<CR>
-nnoremap gO :normal! O<ESC>j
+" Keymaps
 nnoremap Y y$
 "" for perl
 inoremap <C-d> $
