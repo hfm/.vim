@@ -9,33 +9,29 @@ repository = 'ctrlpvim/ctrlp.vim'
 [[plugins]]
 repository = 'justinmk/vim-dirvish'
 
-# Productivities
-## Syntax, Coding rule
+# Syntax
 [[plugins]]
 repository = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
+repository = 'tomtom/tcomment_vim'
+
+[[plugins]]
 repository = 'junegunn/vim-easy-align'
 
-## Cursor
+# Cursor
 [[plugins]]
 repository = 'Lokaltog/vim-easymotion'
 
+# Productivity
 [[plugins]]
 repository = '907th/vim-auto-save'
 
-## Input Support
-[[plugins]]
-repository = 'AndrewRadev/switch.vim'
-
-[[plugins]]
-repository = 'tomtom/tcomment_vim'
-
-## Git
+# Git
 [[plugins]]
 repository = 'tpope/vim-fugitive'
 
-## Display
+# Display
 [[plugins]]
 repository = 'itchyny/lightline.vim'
 
@@ -46,6 +42,5 @@ repository = 'w0ng/vim-hybrid'
 repository = 'Yggdroot/indentLine'
 
 # Memo
-
 [[plugins]]
 repository = 'vimwiki'

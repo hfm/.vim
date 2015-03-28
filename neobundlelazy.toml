@@ -2,7 +2,7 @@
 # [[plugins]]
 # repository =
 
-# Autocomplete and Snippets
+# Completion
 [[plugins]]
 repository = 'Shougo/neocomplete.vim'
 insert = 1
@@ -25,6 +25,10 @@ insert = 1
 [[plugins]]
 repository = 'cohama/vim-smartinput-endwise'
 insert = 1
+
+[[plugins]]
+repository = 'AndrewRadev/switch.vim'
+commands = 'Switch'
 
 # Syntax
 [[plugins]]
