@@ -108,6 +108,20 @@ repository = 'rhysd/vim-operator-surround'
 depends = 'vim-operator-user'
 mappings = '<Plug>'
 
+# Text objects (textobj)
+[[plugins]]
+repository = 'kana/vim-textobj-user'
+
+[[plugins]]
+repository = 'rhysd/vim-textobj-anyblock'
+depends = 'vim-textobj-user'
+mappings = [['ox', '<Plug>']]
+
+[[plugins]]
+repository = 'thinca/vim-textobj-between'
+depends = 'vim-textobj-user'
+mappings = [['ox', '<Plug>']]
+
 ## GitHub
 [[plugins]]
 repository = 'lambdalisue/vim-gista'

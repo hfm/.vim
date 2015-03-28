@@ -49,15 +49,3 @@ repository = 'Yggdroot/indentLine'
 
 [[plugins]]
 repository = 'vimwiki'
-
-# Text objects (textobj)
-[[plugins]]
-repository = 'kana/vim-textobj-user'
-
-[[plugins]]
-repository = 'rhysd/vim-textobj-anyblock'
-depends = 'vim-textobj-user'
-
-[[plugins]]
-repository = 'thinca/vim-textobj-between'
-depends = 'vim-textobj-user'
