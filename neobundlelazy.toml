@@ -34,7 +34,7 @@ filetypes = 'all'
 
 [[plugins]]
 repository = 'evanmiller/nginx-vim-syntax'
-filetypes = 'nginx.conf'
+filetypes = 'nginx'
 
 [[plugins]]
 repository ='cespare/vim-toml'
