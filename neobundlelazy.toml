@@ -33,7 +33,7 @@ commands = 'Switch'
 # Syntax
 [[plugins]]
 repository = 'osyo-manga/vim-watchdogs'
-depends = ['osyo-manga/shabadou.vim', 'cohama/vim-hier']
+depends = ['osyo-manga/shabadou.vim', 'cohama/vim-hier', 'dannyob/quickfixstatus']
 filetypes = 'all'
 
 [[plugins]]
