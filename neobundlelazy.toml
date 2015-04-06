@@ -87,6 +87,10 @@ filetypes = ['ruby', 'eruby']
 repository = 'vim-perl/vim-perl'
 filetypes = 'perl'
 
+[[plugins]]
+repository = 'vim-jp/vim-go-extra'
+filetypes = 'go'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
