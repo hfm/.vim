@@ -1,2 +1,2 @@
 set completeopt=menu,preview
-auto BufWritePre *.go Fmt
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
