@@ -19,17 +19,20 @@ if neobundle#tap('lightline.vim')
   call neobundle#untap()
 endif
 
-" quickrun.vim
-let g:quickrun_config = {}
-let g:quickrun_config._={
-      \  'runner': 'vimproc',
-      \  'runner/vimproc/updatetime': 60,
-      \  'outputter/buffer/split': ':botright',
-      \  'hook/time/enable': '1'
-      \}
-let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+if neobundle#tap('quickrun.vim')
+  let g:quickrun_config = {}
+  let g:quickrun_config._={
+        \  'runner': 'vimproc',
+        \  'runner/vimproc/updatetime': 60,
+        \  'hook/time/enable': '1',
+        \  'outputter/buffer/split': ':botright 10sp',
+        \}
+  let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+  nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+
+  call neobundle#untap()
+endif
 nmap <silent> <Leader>r <Plug>(quickrun)
-nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
 if neobundle#tap('vim-operator-surround')
   map <silent>sa <Plug>(operator-surround-append)
@@ -90,17 +93,20 @@ nnoremap - :Switch<cr>
 
 " watchdogs.vim
 let g:quickrun_config = {
+\   "watchdogs_checker/_" : {
+\       "outputter/quickfix/open_cmd" : "",
+\   },
 \   "ruby/watchdogs_checker" : {
 \       "type" : "watchdogs_checker/rubocop"
-\   }
+\   },
 \}
-let g:quickrun_config["watchdogs_checker/puppet"] = {
-      \ "command" : "puppet-lint",
-      \ "exec"    : '%c %o %s:p',
-      \ }
-let g:quickrun_config["puppet/watchdogs_checker"] = {
-      \ "type" : "watchdogs_checker/puppet",
-      \ }
+" let g:quickrun_config["watchdogs_checker/puppet"] = {
+"       \ "command" : "puppet-lint",
+"       \ "exec"    : '%c %o %s:p',
+"       \ }
+" let g:quickrun_config["puppet/watchdogs_checker"] = {
+"       \ "type" : "watchdogs_checker/puppet",
+"       \ }
 
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_BufWritePost_enable_on_wq = 0
