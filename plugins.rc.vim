@@ -78,11 +78,6 @@ if neobundle#tap('memolist.vim')
   call neobundle#untap()
 endif
 
-" vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-let g:vimwiki_global_ext = 0
-
 " vim-auto-save
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
