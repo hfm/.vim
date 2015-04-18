@@ -1,12 +1,11 @@
 let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'filename' ] ]
       \ },
       \ 'component_function': {
       \   'modified': 'MyModified',
       \   'readonly': 'MyReadonly',
-      \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
       \   'filetype': 'MyFiletype',
@@ -31,10 +30,6 @@ function! MyFilename()
         \  &ft == 'vimshell' ? substitute(b:vimshell.current_dir,expand('~'),'~','') : 
         \ '' != expand('%t') ? expand('%t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-  return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head()) ? '⭠ '.fugitive#head() : ''
 endfunction
 
 function! MyFileformat()

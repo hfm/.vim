@@ -27,10 +27,6 @@ repository = 'Lokaltog/vim-easymotion'
 [[plugins]]
 repository = '907th/vim-auto-save'
 
-# Git
-[[plugins]]
-repository = 'tpope/vim-fugitive'
-
 # Display
 [[plugins]]
 repository = 'itchyny/lightline.vim'
