@@ -39,7 +39,6 @@ NeoBundleCheck
 
 " Display
 syntax enable
-set background=dark
 colorscheme hybrid
 set number
 set title
