@@ -38,6 +38,7 @@ filetype plugin indent on
 NeoBundleCheck
 
 " Display
+set t_Co=256
 syntax enable
 colorscheme hybrid
 set number
