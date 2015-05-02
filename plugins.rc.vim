@@ -68,8 +68,8 @@ if neobundle#tap('gista.vim')
 endif
 
 if neobundle#tap('memolist.vim')
-  let g:memolist_memo_suffix = "md"
-  let g:memolist_path = "~/memo"
+  let g:memolist_memo_suffix = 'md'
+  let g:memolist_path = '~/memo'
   let g:memolist_prompt_tags = 1
   let g:memolist_ex_cmd = 'CtrlP'
   map ,mn :MemoNew<CR>
@@ -88,11 +88,11 @@ nnoremap - :Switch<cr>
 
 " watchdogs.vim
 let g:quickrun_config = {
-\   "watchdogs_checker/_" : {
-\       "outputter/quickfix/open_cmd" : "",
+\   'watchdogs_checker/_' : {
+\       'outputter/quickfix/open_cmd' : '',
 \   },
-\   "ruby/watchdogs_checker" : {
-\       "type" : "watchdogs_checker/rubocop"
+\   'ruby/watchdogs_checker' : {
+\       'type' : 'watchdogs_checker/rubocop'
 \   },
 \}
 " let g:quickrun_config["watchdogs_checker/puppet"] = {
