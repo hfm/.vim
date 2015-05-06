@@ -13,9 +13,7 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
-if neobundle#has_cache()
-  NeoBundleLoadCache
-else
+if neobundle#load_cache()
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'Shougo/vimproc.vim', { 'build': {
