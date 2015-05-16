@@ -90,6 +90,3 @@ set nrformats=""
 
 " Keymaps
 nnoremap Y y$
-"" for perl
-inoremap <C-d> $
-inoremap <C-a> @
