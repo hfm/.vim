@@ -30,6 +30,9 @@ repository = 'Lokaltog/vim-easymotion'
 [[plugins]]
 repository = '907th/vim-auto-save'
 
+[[plugins]]
+repository = 'VOoM'
+
 # Display
 [[plugins]]
 repository = 'itchyny/lightline.vim'
