@@ -50,6 +50,7 @@ set ambiwidth=double
 set pumheight=20
 set showmatch
 set matchtime=1
+set scrolloff=5
 runtime macros/matchit.vim
 if has('mac')
   set guifont=RictyForPowerline-Regular
