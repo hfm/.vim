@@ -60,13 +60,6 @@ if neobundle#tap('vim-textobj-user')
   call neobundle#untap()
 endif
 
-if neobundle#tap('gista.vim')
-  let g:gista#github_user = 'tacahilo'
-  let g:gista#auto_yank_after_save = 0
-  let g:gista#auto_yank_after_post = 0
-  call neobundle#untap()
-endif
-
 if neobundle#tap('memolist.vim')
   let g:memolist_memo_suffix = 'md'
   let g:memolist_path = '~/memo'

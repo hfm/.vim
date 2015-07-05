@@ -125,9 +125,3 @@ mappings = [['ox', '<Plug>']]
 repository = 'thinca/vim-textobj-between'
 depends = 'vim-textobj-user'
 mappings = [['ox', '<Plug>']]
-
-## GitHub
-[[plugins]]
-repository = 'lambdalisue/vim-gista'
-mappings = '<Plug>(gista-'
-commands = 'Gista'
