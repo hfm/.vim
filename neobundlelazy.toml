@@ -91,6 +91,10 @@ filetypes = 'perl'
 repository = 'vim-jp/vim-go-extra'
 filetypes = 'go'
 
+[[plugins]]
+repository = 'elixir-lang/vim-elixir'
+filetypes = 'elixir'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
