@@ -96,7 +96,8 @@ let g:quickrun_config = {
 "       \ "type" : "watchdogs_checker/puppet",
 "       \ }
 
-let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
+let g:watchdogs_check_BufWritePost_enable = 0
 let g:watchdogs_check_BufWritePost_enable_on_wq = 0
 
 " easy-motion
