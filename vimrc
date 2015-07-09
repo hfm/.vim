@@ -8,7 +8,6 @@ endif
 " NeoBundle
 if has('vim_starting')
   set rtp+=~/.vim/bundle/neobundle.vim/
-  set rtp+=$GOROOT/misc/vim
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
 endif
 
