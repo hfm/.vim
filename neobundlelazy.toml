@@ -19,11 +19,10 @@ filetypes = 'snippet'
 
 [[plugins]]
 repository = 'kana/vim-smartinput'
-depends = 'cohama/vim-smartinput-endwise'
 insert = 1
 
 [[plugins]]
-repository = 'cohama/vim-smartinput-endwise'
+repository = 'tpope/vim-endwise'
 insert = 1
 
 [[plugins]]
