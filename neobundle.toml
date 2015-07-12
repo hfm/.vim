@@ -9,9 +9,6 @@ repository = 'ctrlpvim/ctrlp.vim'
 [[plugins]]
 repository = 'justinmk/vim-dirvish'
 
-[[plugins]]
-repository = 'rking/ag.vim'
-
 # Syntax
 [[plugins]]
 repository = 'bronson/vim-trailing-whitespace'
