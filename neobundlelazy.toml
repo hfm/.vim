@@ -22,10 +22,6 @@ repository = 'cohama/lexima.vim'
 insert = 1
 
 [[plugins]]
-repository = 'tpope/vim-endwise'
-insert = 1
-
-[[plugins]]
 repository = 'AndrewRadev/switch.vim'
 commands = 'Switch'
 
