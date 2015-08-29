@@ -46,6 +46,7 @@ set list
 set listchars=eol:$,tab:>\ ,extends:<
 set laststatus=2
 set ambiwidth=double
+set formatoptions+=mM
 set pumheight=20
 set showmatch
 set matchtime=1
