@@ -116,3 +116,6 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
+
+let g:voom_tree_width = 60
+let g:voom_default_mode = 'markdown'
