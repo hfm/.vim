@@ -36,6 +36,7 @@ NeoBundleCheck
 
 " Display
 set t_Co=256
+set background=dark
 syntax enable
 colorscheme hybrid
 set number
