@@ -90,6 +90,10 @@ filetypes = 'go'
 repository = 'elixir-lang/vim-elixir'
 filetypes = 'elixir'
 
+[[plugins]]
+repository = 'yoppi/fluentd.vim'
+filetypes = 'fluentd'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
