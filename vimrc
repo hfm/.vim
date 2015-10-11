@@ -50,6 +50,7 @@ set ambiwidth=double
 set formatoptions+=mM
 set pumheight=20
 set wildmenu
+set lazyredraw
 set showmatch
 set matchtime=1
 set scrolloff=5
