@@ -49,6 +49,7 @@ set laststatus=2
 set ambiwidth=double
 set formatoptions+=mM
 set pumheight=20
+set wildmenu
 set showmatch
 set matchtime=1
 set scrolloff=5
