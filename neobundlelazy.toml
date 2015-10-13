@@ -121,10 +121,10 @@ repository = 'kana/vim-textobj-user'
 
 [[plugins]]
 repository = 'rhysd/vim-textobj-anyblock'
-depends = 'vim-textobj-user'
+depends = 'kana/vim-textobj-user'
 mappings = [['ox', '<Plug>']]
 
 [[plugins]]
 repository = 'thinca/vim-textobj-between'
-depends = 'vim-textobj-user'
+depends = 'kana/vim-textobj-user'
 mappings = [['ox', '<Plug>']]
