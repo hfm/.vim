@@ -94,6 +94,10 @@ filetypes = 'elixir'
 repository = 'yoppi/fluentd.vim'
 filetypes = 'fluentd'
 
+[[plugins]]
+repository = 'kchmck/vim-coffee-script'
+filetypes = 'coffee'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
