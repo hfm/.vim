@@ -39,3 +39,6 @@ repository = 'w0ng/vim-hybrid'
 
 [[plugins]]
 repository = 'Yggdroot/indentLine'
+
+[[plugins]]
+repository = 'switch.vim'
