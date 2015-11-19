@@ -104,7 +104,7 @@ repository = 'glidenote/roadworker.vim'
 filetypes = 'ruby.roadworker'
 
 [[plugins]]
-repository = 'bkad/vim-terraform'
+repository = 'markcornick/vim-terraform'
 filetypes = 'terraform'
 
 # Development
