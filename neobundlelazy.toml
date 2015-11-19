@@ -99,6 +99,10 @@ filetypes = 'fluentd'
 repository = 'kchmck/vim-coffee-script'
 filetypes = 'coffee'
 
+[[plugins]]
+repository = 'glidenote/roadworker.vim'
+filetypes = 'ruby.roadworker'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
