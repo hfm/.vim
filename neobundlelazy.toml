@@ -103,6 +103,10 @@ filetypes = 'coffee'
 repository = 'glidenote/roadworker.vim'
 filetypes = 'ruby.roadworker'
 
+[[plugins]]
+repository = 'bkad/vim-terraform'
+filetypes = 'terraform'
+
 # Development
 [[plugins]]
 repository = 'thinca/vim-quickrun'
