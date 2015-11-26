@@ -1,38 +1,92 @@
-" skip if vim-tiny or vim-small
-if !1 | finish | endif
 
-if &compatible
-  set nocompatible
-endif
-
-" NeoBundle
 if has('vim_starting')
-  set rtp+=~/.vim/bundle/neobundle.vim/
   exe 'set rtp+=' . globpath($GOPATH, 'src/github.com/golang/lint/misc/vim')
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-if neobundle#load_cache()
-  NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'justinmk/vim-dirvish'
 
-  NeoBundle 'Shougo/vimproc.vim', { 'build': {
-        \ 'mac'  : 'make -f make_mac.mak',
-        \ 'unix' : 'make -f make_unix.mak',
-        \ }}
+" Syntax
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/vim-easy-align'
 
-  call neobundle#load_toml('~/.vim/neobundle.toml')
-  call neobundle#load_toml('~/.vim/neobundlelazy.toml', {'lazy' : 1})
+" Cursor
+Plug 'Lokaltog/vim-easymotion'
 
-  NeoBundleSaveCache
-endif
+" Productivity
+Plug '907th/vim-auto-save'
+Plug 'VOoM'
+
+" Display
+Plug 'itchyny/lightline.vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'Yggdroot/indentLine'
+
+" Completion
+Plug 'Shougo/neocomplete.vim', { 'on': [] }
+Plug 'Shougo/neosnippet.vim', { 'on': [] } | Plug 'Shougo/context_filetype.vim'
+" augroup load_on_insert
+"   autocmd!
+"   autocmd InsertEnter * call plug#load('neocomplete.vim', 'neosnippet.vim')
+"                      \| call youcompleteme#Enable() | autocmd! load_us_ycm
+" augroup END
+
+Plug 'tacahilo/neosnippet-snippets',    { 'on'  : [], 'for' : 'snippet' }
+Plug 'glidenote/serverspec-snippets',   { 'on'  : [], 'for' : 'snippet' }
+Plug 'tacahilo/itamae-snippets',        { 'on'  : [], 'for' : 'snippet' }
+Plug 'tacahilo/terraform-snippets.vim', { 'on'  : [], 'for' : 'snippet' }
+Plug 'cohama/lexima.vim', { 'on'  : [] }
+Plug 'AndrewRadev/switch.vim', { 'on' : 'Switch' }
+
+" Syntax
+Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
+Plug 'cohama/vim-hier'
+Plug 'dannyob/quickfixstatus'
+Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+
+" Markdown or texts
+Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
+Plug 'kannokanno/previm', { 'for' : ['markdown', 'md', 'rst'] }
+Plug 'open-browser.vim', { 'on' : 'openbrowser#open', 'for' : ['markdown', 'md', 'rst'] }
+Plug 'glidenote/memolist.vim', { 'on' : ['MemoNew', 'MemoList', 'MemoGrep'] }
+
+" Languages
+Plug 'rodjek/vim-puppet',         { 'for': 'puppet' }
+Plug 'mattn/emmet-vim',           { 'for': 'html' }
+Plug 'nvie/vim-flake8',           { 'for': 'python' }
+Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
+Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
+Plug 'vim-jp/vim-go-extra',       { 'for': 'go' }
+Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
+Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
+Plug 'kchmck/vim-coffee-script',  { 'for': 'coffee' }
+Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
+Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
+
+" Development
+Plug 'thinca/vim-quickrun', { 'on' : 'Quickrun' }
+
+"" Operators
+Plug 'kana/vim-operator-user', { 'on' : 'operator#user#define' }
+Plug 'kana/vim-operator-replace'
+Plug 'rhysd/vim-operator-surround'
+
+" Text objects (textobj)
+Plug 'kana/vim-textobj-user'
+Plug 'rhysd/vim-textobj-anyblock'
+Plug 'thinca/vim-textobj-between'
+
+call plug#end()
 
 if filereadable(expand('~/.vim/plugins.rc.vim'))
   source ~/.vim/plugins.rc.vim
 endif
-call neobundle#end()
 
 filetype plugin indent on
-NeoBundleCheck
 
 " Display
 set t_Co=256
