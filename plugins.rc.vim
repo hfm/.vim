@@ -24,14 +24,6 @@ vmap if <Plug>(textobj-between-i)
 nmap <silent>sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
 nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 
-let g:memolist_memo_suffix = 'md'
-let g:memolist_path = '~/memo'
-let g:memolist_prompt_tags = 1
-let g:memolist_ex_cmd = 'CtrlP'
-map ,mn :MemoNew<CR>
-map ,ml :MemoList<CR>
-map ,mg :MemoGrep<CR>
-
 " vim-auto-save
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
