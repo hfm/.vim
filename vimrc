@@ -58,7 +58,7 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 " Markdown or texts
 Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
 Plug 'kannokanno/previm', { 'for' : ['markdown', 'md', 'rst'] }
-Plug 'open-browser.vim', { 'on' : 'openbrowser#open', 'for' : ['markdown', 'md', 'rst'] }
+      \| Plug 'open-browser.vim', { 'for' : ['markdown', 'md', 'rst'] }
 Plug 'glidenote/memolist.vim', { 'on' : ['MemoNew', 'MemoList', 'MemoGrep'] }
 
 " Languages
@@ -78,7 +78,7 @@ Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'thinca/vim-quickrun', { 'on' : 'Quickrun' }
 
 "" Operators
-Plug 'kana/vim-operator-user', { 'on' : 'operator#user#define' }
+Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'rhysd/vim-operator-surround'
 
