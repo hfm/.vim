@@ -4,3 +4,4 @@
 
 # Vim
 plugged/
+autoload/plug.vim
