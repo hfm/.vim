@@ -3,4 +3,5 @@
 ._*
 
 # Vim
-/bundle/*
+plugged/
+autoload/plug.vim
