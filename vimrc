@@ -32,19 +32,21 @@ Plug 'Yggdroot/indentLine'
 
 " Completion
 Plug 'Shougo/neocomplete.vim', { 'on': [] }
-Plug 'Shougo/neosnippet.vim', { 'on': [] } | Plug 'Shougo/context_filetype.vim'
-" augroup load_on_insert
-"   autocmd!
-"   autocmd InsertEnter * call plug#load('neocomplete.vim', 'neosnippet.vim')
-"                      \| call youcompleteme#Enable() | autocmd! load_us_ycm
-" augroup END
-
+      \| Plug 'Shougo/context_filetype.vim'
+Plug 'Shougo/neosnippet.vim', { 'on': [] }
 Plug 'tacahilo/neosnippet-snippets',    { 'on'  : [], 'for' : 'snippet' }
 Plug 'glidenote/serverspec-snippets',   { 'on'  : [], 'for' : 'snippet' }
 Plug 'tacahilo/itamae-snippets',        { 'on'  : [], 'for' : 'snippet' }
 Plug 'tacahilo/terraform-snippets.vim', { 'on'  : [], 'for' : 'snippet' }
+
 Plug 'cohama/lexima.vim', { 'on'  : [] }
 Plug 'AndrewRadev/switch.vim', { 'on' : 'Switch' }
+
+augroup load_on_insert
+  autocmd!
+  autocmd InsertEnter * call plug#load('neocomplete.vim', 'neosnippet.vim', 'neosnippet-snippets', 'serverspec-snippets', 'itamae-snippets', 'terraform-snippets.vim', 'lexima.vim')
+                     \| NeoCompleteEnable | autocmd! load_on_insert
+augroup END
 
 " Syntax
 Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
