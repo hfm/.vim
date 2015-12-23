@@ -41,6 +41,7 @@ Plug 'tacahilo/terraform-snippets.vim', { 'on'  : [], 'for' : 'snippet' }
 
 Plug 'cohama/lexima.vim', { 'on'  : [] }
 Plug 'AndrewRadev/switch.vim', { 'on' : 'Switch' }
+Plug 'mattn/sonictemplate-vim'
 
 augroup load_on_insert
   autocmd!
