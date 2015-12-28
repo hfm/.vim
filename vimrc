@@ -34,10 +34,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'Shougo/neocomplete.vim', { 'on': [] }
       \| Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neosnippet.vim', { 'on': [] }
-Plug 'tacahilo/neosnippet-snippets',    { 'on'  : [], 'for' : 'snippet' }
-Plug 'glidenote/serverspec-snippets',   { 'on'  : [], 'for' : 'snippet' }
-Plug 'tacahilo/itamae-snippets',        { 'on'  : [], 'for' : 'snippet' }
-Plug 'tacahilo/terraform-snippets.vim', { 'on'  : [], 'for' : 'snippet' }
+Plug 'hfm/neosnippet-snippets',       { 'on': [], 'for': 'snippet' }
+Plug 'glidenote/serverspec-snippets', { 'on': [], 'for': 'snippet' }
+Plug 'hfm/itamae-snippets',           { 'on': [], 'for': 'snippet' }
+Plug 'hfm/terraform-snippets.vim',    { 'on': [], 'for': 'snippet' }
 
 Plug 'cohama/lexima.vim', { 'on'  : [] }
 Plug 'AndrewRadev/switch.vim', { 'on' : 'Switch' }
