@@ -35,6 +35,7 @@ Plug 'Shougo/neocomplete.vim', { 'on': [] }
       \| Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neosnippet.vim', { 'on': [] }
 Plug 'hfm/neosnippet-snippets',       { 'on': [], 'for': 'snippet' }
+Plug 'honza/vim-snippets',            { 'on': [], 'for': 'snippet' }
 Plug 'glidenote/serverspec-snippets', { 'on': [], 'for': 'snippet' }
 Plug 'hfm/itamae-snippets',           { 'on': [], 'for': 'snippet' }
 Plug 'hfm/terraform-snippets.vim',    { 'on': [], 'for': 'snippet' }
