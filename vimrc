@@ -41,7 +41,7 @@ Plug 'hfm/itamae-snippets',           { 'on': [], 'for': 'snippet' }
 Plug 'hfm/terraform-snippets.vim',    { 'on': [], 'for': 'snippet' }
 
 Plug 'cohama/lexima.vim', { 'on'  : [] }
-Plug 'AndrewRadev/switch.vim', { 'on' : 'Switch' }
+Plug 'AndrewRadev/switch.vim'
 Plug 'mattn/sonictemplate-vim'
 
 augroup load_on_insert
