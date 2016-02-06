@@ -17,6 +17,7 @@ Plug 'justinmk/vim-dirvish'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
 
 " Cursor
 Plug 'Lokaltog/vim-easymotion'
