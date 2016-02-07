@@ -39,7 +39,6 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " indentLine
-let g:indentLine_faster = 1
 let g:indentLine_color_term = 232
 
 "" easy-align
