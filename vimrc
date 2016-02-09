@@ -71,8 +71,8 @@ Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
 Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
 Plug 'vim-jp/vim-go-extra',       { 'for': 'go' }
-Plug 'nsf/gocode',                { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'tcnksm/gotests',            { 'rtp': 'editor/vim' }
+Plug 'nsf/gocode',                { 'rtp': 'vim' }
 Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
 Plug 'kchmck/vim-coffee-script',  { 'for': 'coffee' }
