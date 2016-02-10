@@ -80,7 +80,7 @@ Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 " Development
-Plug 'thinca/vim-quickrun', { 'on' : 'Quickrun' }
+Plug 'thinca/vim-quickrun'
 
 "" Operators
 Plug 'kana/vim-operator-user'
