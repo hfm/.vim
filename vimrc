@@ -77,6 +77,7 @@ Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
 Plug 'kchmck/vim-coffee-script',  { 'for': 'coffee' }
 Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
 Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 " Development
 Plug 'thinca/vim-quickrun', { 'on' : 'Quickrun' }
