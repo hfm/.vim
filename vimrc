@@ -17,7 +17,6 @@ Plug 'justinmk/vim-dirvish'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'godlygeek/tabular'
 
 " Cursor
 Plug 'Lokaltog/vim-easymotion'
@@ -71,6 +70,7 @@ Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
 Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
 Plug 'vim-jp/vim-go-extra',       { 'for': 'go' }
+Plug 'tcnksm/gotests',            { 'rtp': 'editor/vim' }
 Plug 'nsf/gocode',                { 'rtp': 'vim' }
 Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
