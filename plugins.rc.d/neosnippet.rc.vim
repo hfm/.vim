@@ -12,4 +12,7 @@ let g:neosnippet#snippets_directory = [
       \ '~/.vim/plugged/terraform-snippets.vim',
       \ ]
 let g:neosnippet#enable_conceal_markers=0
-let g:neosnippet#enable_auto_clear_markers=0
+augroup ClearMarkers
+  autocmd!
+  autocmd InsertLeave * NeoSnippetClearMarkers
+augroup END
