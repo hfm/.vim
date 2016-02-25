@@ -34,7 +34,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'Shougo/neocomplete.vim', { 'on': [] }
       \| Plug 'Shougo/context_filetype.vim'
 Plug 'Shougo/neosnippet.vim', { 'on': [] }
-Plug 'hfm/neosnippet-snippets',       { 'on': [], 'for': 'snippet' }
 Plug 'honza/vim-snippets',            { 'on': [], 'for': 'snippet' }
 Plug 'glidenote/serverspec-snippets', { 'on': [], 'for': 'snippet' }
 Plug 'hfm/itamae-snippets',           { 'on': [], 'for': 'snippet' }
@@ -46,7 +45,7 @@ Plug 'mattn/sonictemplate-vim'
 
 augroup load_on_insert
   autocmd!
-  autocmd InsertEnter * call plug#load('neocomplete.vim', 'neosnippet.vim', 'neosnippet-snippets', 'serverspec-snippets', 'itamae-snippets', 'terraform-snippets.vim', 'lexima.vim')
+  autocmd InsertEnter * call plug#load('neocomplete.vim', 'neosnippet.vim', 'vim-snippets', 'serverspec-snippets', 'itamae-snippets', 'terraform-snippets.vim', 'lexima.vim')
                      \| NeoCompleteEnable | autocmd! load_on_insert
 augroup END
 
