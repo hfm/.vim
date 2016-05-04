@@ -10,3 +10,6 @@ ftplugin/go/gocomplete.vim
 
 # vim-plug
 autoload/plug.vim
+
+# Ignore symlink
+ftplugin/go/gotests.vim
