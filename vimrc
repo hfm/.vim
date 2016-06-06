@@ -24,6 +24,7 @@ Plug 'Lokaltog/vim-easymotion'
 " Productivity
 Plug '907th/vim-auto-save'
 Plug 'VOoM'
+Plug 'mattn/googletranslate-vim'
 
 " Display
 Plug 'itchyny/lightline.vim'
