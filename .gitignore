@@ -7,3 +7,9 @@ plugged/
 autoload/plug.vim
 autoload/gocomplete.vim
 ftplugin/go/gocomplete.vim
+
+# vim-plug
+autoload/plug.vim
+
+# Ignore symlink
+ftplugin/go/gotests.vim
