@@ -13,3 +13,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
   let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup --hidden --ignore .git --ignore .bundle --ignore .DS_Store -g ""'
 endif
+
+" ctrlp-funky
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
