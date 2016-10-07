@@ -50,3 +50,4 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 let g:voom_tree_width = 60
 let g:voom_default_mode = 'markdown'
+let g:indentLine_conceallevel = 0
