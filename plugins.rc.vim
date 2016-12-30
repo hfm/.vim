@@ -51,3 +51,8 @@ nmap <Leader>a <Plug>(EasyAlign)
 let g:voom_tree_width = 60
 let g:voom_default_mode = 'markdown'
 let g:indentLine_conceallevel = 0
+
+" vim-racer
+let g:racer_cmd = "$HOME/.cargo/bin/racer"
+let $RUST_SRC_PATH = "$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+let g:racer_experimental_completer = 1
