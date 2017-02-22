@@ -55,7 +55,6 @@ augroup END
 Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
 Plug 'cohama/vim-hier'
 Plug 'dannyob/quickfixstatus'
-Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Markdown or texts
