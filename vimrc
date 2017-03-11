@@ -79,6 +79,7 @@ Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
 Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
 Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
+Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
 
 " Development
 Plug 'thinca/vim-quickrun'
