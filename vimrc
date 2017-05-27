@@ -24,7 +24,7 @@ Plug 'Lokaltog/vim-easymotion'
 
 " Productivity
 Plug '907th/vim-auto-save'
-Plug 'VOoM'
+Plug 'vim-voom/VOoM'
 
 " Display
 Plug 'itchyny/lightline.vim'
@@ -60,7 +60,7 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 " Markdown or texts
 Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
 Plug 'kannokanno/previm', { 'for' : ['markdown', 'md', 'rst'] }
-      \| Plug 'open-browser.vim', { 'for' : ['markdown', 'md', 'rst'] }
+      \| Plug 'tyru/open-browser.vim', { 'for' : ['markdown', 'md', 'rst'] }
 Plug 'glidenote/memolist.vim', { 'on' : ['MemoNew', 'MemoList', 'MemoGrep'] }
 
 " Languages
