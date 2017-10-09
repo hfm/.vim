@@ -130,8 +130,8 @@ if has('mac')
 endif
 
 " Encode and Files
-set encoding=utf-8
-set fileencoding=utf-8
+set encoding=utf8
+set fileencoding=utf8
 set hidden
 set autoread
 set backupdir=$HOME/.backup/vim
