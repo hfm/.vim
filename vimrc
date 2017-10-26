@@ -126,9 +126,8 @@ set matchtime=1
 set scrolloff=5
 runtime macros/matchit.vim
 if has('mac')
-  set guifont=RictyForPowerline-Regular
-  set guifontset=RictyForPowerline-Regular
-  set guifontwide=RictyForPowerline-Regular
+  set guifont=Cica:h16
+  set printfont=Cica:h12
 endif
 
 " Encode and Files
