@@ -25,6 +25,8 @@ Plug 'Lokaltog/vim-easymotion'
 " Productivity
 Plug '907th/vim-auto-save'
 Plug 'vim-voom/VOoM'
+Plug 'mattn/gist-vim', {'for' : ['markdown', 'md'] }
+      \| Plug 'mattn/webapi-vim'
 
 " Display
 Plug 'itchyny/lightline.vim'
