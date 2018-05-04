@@ -82,6 +82,7 @@ Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
 Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
 Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
+Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 
 " Development
 Plug 'thinca/vim-quickrun'
