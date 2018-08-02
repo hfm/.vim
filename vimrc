@@ -25,8 +25,6 @@ Plug 'Lokaltog/vim-easymotion'
 " Productivity
 Plug '907th/vim-auto-save'
 Plug 'vim-voom/VOoM'
-Plug 'mattn/gist-vim', {'for' : ['markdown', 'md'] }
-      \| Plug 'mattn/webapi-vim'
 
 " Display
 Plug 'itchyny/lightline.vim'
@@ -45,7 +43,6 @@ Plug 'hfm/terraform-snippets.vim',    { 'on': [], 'for': 'snippet' }
 
 Plug 'cohama/lexima.vim', { 'on'  : [] }
 Plug 'AndrewRadev/switch.vim'
-Plug 'mattn/sonictemplate-vim'
 
 augroup load_on_insert
   autocmd!
