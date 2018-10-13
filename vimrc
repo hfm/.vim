@@ -80,6 +80,7 @@ Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
 Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
 Plug 'stevearc/vim-arduino',      { 'for': 'arduino' }
 Plug 'slim-template/vim-slim',    { 'for': 'slim' }
+Plug 'posva/vim-vue',             { 'for': 'vue' }
 
 " Development
 Plug 'thinca/vim-quickrun'
