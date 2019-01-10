@@ -71,7 +71,6 @@ Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
 Plug 'vim-jp/vim-go-extra',       { 'for': 'go' }
 Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
-Plug 'kchmck/vim-coffee-script',  { 'for': 'coffee' }
 Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
 Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
