@@ -4,6 +4,7 @@ source $HOME/.vim/plugins.rc.d/ctrlp.rc.vim
 source $HOME/.vim/plugins.rc.d/lightline.rc.vim
 source $HOME/.vim/plugins.rc.d/quickrun.rc.vim
 source $HOME/.vim/plugins.rc.d/memolist.rc.vim
+source $HOME/.vim/plugins.rc.d/lsp.rc.vim
 
 map <silent>sa <Plug>(operator-surround-append)
 map <silent>sd <Plug>(operator-surround-delete)

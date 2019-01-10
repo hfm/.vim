@@ -81,6 +81,8 @@ Plug 'stevearc/vim-arduino',      { 'for': 'arduino' }
 Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 
 " Development
 Plug 'thinca/vim-quickrun'
