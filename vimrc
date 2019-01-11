@@ -162,6 +162,10 @@ set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
 set clipboard=unnamed
 set nrformats=""
+autocmd FileType *
+      \ if &l:omnifunc == ''
+      \| setlocal omnifunc=syntaxcomplete#Complete
+      \| endif
 
 " Keymaps
 nnoremap Y y$
