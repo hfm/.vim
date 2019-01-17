@@ -1,5 +1,3 @@
-source $HOME/.vim/plugins.rc.d/neocomplete.rc.vim
-source $HOME/.vim/plugins.rc.d/neosnippet.rc.vim
 source $HOME/.vim/plugins.rc.d/ctrlp.rc.vim
 source $HOME/.vim/plugins.rc.d/lightline.rc.vim
 source $HOME/.vim/plugins.rc.d/quickrun.rc.vim
