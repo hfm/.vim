@@ -4,7 +4,7 @@ if executable('golsp')
     autocmd User lsp_setup call lsp#register_server({
           \ 'name': 'go-lang',
           \ 'cmd': {server_info->['golsp', '-mode', 'stdio']},
-          \ 'whitelst': ['go'],
+          \ 'whitelist': ['go'],
           \ })
     autocmd FileType go setlocal omnifunc=lsp#complete
   augroup END
