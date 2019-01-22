@@ -14,7 +14,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'justinmk/vim-dirvish'
 
-" Syntax
+" Syntax/Alignment
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
@@ -24,31 +24,34 @@ Plug 'Lokaltog/vim-easymotion'
 
 " Productivity
 Plug '907th/vim-auto-save'
-Plug 'vim-voom/VOoM'
 
 " Display
 Plug 'itchyny/lightline.vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'Yggdroot/indentLine'
 
-" Completion
-
-Plug 'cohama/lexima.vim'
-Plug 'AndrewRadev/switch.vim'
-
 " Syntax
 Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
 Plug 'cohama/vim-hier'
 Plug 'dannyob/quickfixstatus'
-Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Markdown or texts
 Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
 Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }
       \| Plug 'tyru/open-browser.vim', { 'for' : ['markdown', 'md', 'rst'] }
-Plug 'glidenote/memolist.vim', { 'on' : ['MemoNew', 'MemoList', 'MemoGrep'] }
 
-" Languages
+" Autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'cohama/lexima.vim'
+Plug 'AndrewRadev/switch.vim'
+
+"" Languages
 Plug 'rodjek/vim-puppet',         { 'for': 'puppet' }
 Plug 'mattn/emmet-vim',           { 'for': 'html' }
 Plug 'nvie/vim-flake8',           { 'for': 'python' }
@@ -66,23 +69,24 @@ Plug 'stevearc/vim-arduino',      { 'for': 'arduino' }
 Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Development
 Plug 'thinca/vim-quickrun'
 
-"" Operators
+"" Operators / Text objects (textobj)
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'rhysd/vim-operator-surround'
-
-" Text objects (textobj)
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-anyblock'
 Plug 'thinca/vim-textobj-between'
 
 call plug#end()
+
+augroup vimrc
+  autocmd!
+augroup END
 
 if filereadable(expand('~/.vim/plugins.rc.vim'))
   source ~/.vim/plugins.rc.vim
