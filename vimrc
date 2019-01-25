@@ -70,6 +70,7 @@ Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'sudar/vim-arduino-syntax',  { 'for': 'ino' }
 
 " Development
 Plug 'thinca/vim-quickrun'
