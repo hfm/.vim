@@ -71,6 +71,7 @@ Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'sudar/vim-arduino-syntax',  { 'for': 'ino' }
+Plug 'leafgarland/typescript-vim',  { 'for': ['ts', 'tsx'] }
 
 " Development
 Plug 'thinca/vim-quickrun'
