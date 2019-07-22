@@ -53,7 +53,7 @@ Plug 'AndrewRadev/switch.vim'
 
 "" Languages
 Plug 'rodjek/vim-puppet',         { 'for': 'puppet' }
-Plug 'mattn/emmet-vim',           { 'for': 'html' }
+Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
 Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
 Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
@@ -71,7 +71,9 @@ Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'sudar/vim-arduino-syntax',  { 'for': 'ino' }
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim',  { 'for': ['ts', 'tsx'] }
+Plug 'MaxMEllon/vim-jsx-pretty'
 
 " Development
 Plug 'thinca/vim-quickrun'

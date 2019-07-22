@@ -55,3 +55,6 @@ let g:indentLine_conceallevel = 0
 let g:racer_cmd = "$HOME/.cargo/bin/racer"
 let $RUST_SRC_PATH = "$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 let g:racer_experimental_completer = 1
+
+" js
+let g:vim_jsx_pretty_colorful_config = 1
