@@ -71,9 +71,9 @@ Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'sudar/vim-arduino-syntax',  { 'for': 'ino' }
-Plug 'pangloss/vim-javascript',  { 'for': ['js', 'ts', 'tsx'] }
-Plug 'leafgarland/typescript-vim',  { 'for': ['ts', 'tsx'] }
-Plug 'MaxMEllon/vim-jsx-pretty',  { 'for': ['ts', 'tsx', 'jsx'] }
+Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
+Plug 'leafgarland/typescript-vim',{ 'for': ['javacsript', 'typescript'] }
+Plug 'MaxMEllon/vim-jsx-pretty',  { 'for': ['javacsript', 'typescript'] }
 
 " Development
 Plug 'thinca/vim-quickrun'
