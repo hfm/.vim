@@ -59,3 +59,6 @@ let g:racer_experimental_completer = 1
 
 " js
 let g:vim_jsx_pretty_colorful_config = 1
+
+" jsonnet
+let g:jsonnet_fmt_on_save = 0
