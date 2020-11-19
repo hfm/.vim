@@ -34,16 +34,13 @@ autocmd vimrc User asyncomplete_setup call asyncomplete#register_source(asyncomp
       \  }))
 
 " language server protocol
-if executable('golsp')
-  augroup LspGo
-    au!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'go-lang',
-          \ 'cmd': {server_info->['golsp', '-mode', 'stdio']},
+if executable('gopls')
+  au User lsp_setup call lsp#register_server({
+          \ 'name': 'gopls',
+          \ 'cmd': {server_info->['gopls']},
           \ 'whitelist': ['go'],
           \ })
-    autocmd FileType go setlocal omnifunc=lsp#complete
-  augroup END
+  autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 
 if executable('solargraph')

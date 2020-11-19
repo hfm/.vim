@@ -57,8 +57,7 @@ Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
 Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
 Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
-Plug 'fatih/vim-go'
-Plug 'vim-jp/vim-go-extra',       { 'for': 'go' }
+Plug 'mattn/vim-goimports'
 Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
 " Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
