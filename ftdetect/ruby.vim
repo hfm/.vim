@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.elb,*.route,*.group set ft=ruby
+au BufRead,BufNewFile *.elb,*.route,*.group,*.iam set ft=ruby
