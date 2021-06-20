@@ -38,7 +38,6 @@ Plug 'dannyob/quickfixstatus'
 " Markdown or texts
 Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
 Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }
-      \| Plug 'tyru/open-browser.vim', { 'for' : ['markdown', 'md', 'rst'] }
 
 " Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'

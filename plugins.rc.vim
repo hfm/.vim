@@ -62,3 +62,6 @@ let g:vim_jsx_pretty_colorful_config = 1
 
 " jsonnet
 let g:jsonnet_fmt_on_save = 0
+
+" previm
+let g:previm_open_cmd = 'open -a Google\ Chrome'
