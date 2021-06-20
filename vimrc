@@ -9,7 +9,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'justinmk/vim-dirvish'
@@ -51,13 +50,10 @@ Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/switch.vim'
 
 "" Languages
-Plug 'rodjek/vim-puppet',         { 'for': 'puppet' }
 Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
 Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
-Plug 'vim-perl/vim-perl',         { 'for': 'perl' }
 Plug 'mattn/vim-goimports'
-Plug 'elixir-lang/vim-elixir',    { 'for': 'elixir' }
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
 " Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
 Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
