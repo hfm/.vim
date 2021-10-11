@@ -33,6 +33,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
 Plug 'cohama/vim-hier'
 Plug 'dannyob/quickfixstatus'
+Plug 'dag/vim-fish'
 
 " Markdown or texts
 Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
