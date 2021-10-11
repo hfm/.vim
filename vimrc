@@ -55,17 +55,14 @@ Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
 Plug 'mattn/vim-goimports'
 Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
-" Plug 'glidenote/roadworker.vim',  { 'for': 'ruby.roadworker' }
 Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
 Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
 Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
-" Plug 'stevearc/vim-arduino',      { 'for': 'arduino' }
 Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-" Plug 'sudar/vim-arduino-syntax',  { 'for': 'ino' }
 Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
 Plug 'leafgarland/typescript-vim',{ 'for': ['javacsript', 'typescript'] }
 Plug 'MaxMEllon/vim-jsx-pretty',  { 'for': ['javacsript', 'typescript'] }
