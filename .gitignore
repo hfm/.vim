@@ -4,7 +4,7 @@
 
 # Vim
 plugged/
-autoload/plug.vim
+autoload/plug.vim*
 autoload/gocomplete.vim
 ftplugin/go/gocomplete.vim
 
