@@ -1,33 +1,17 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'justinmk/vim-dirvish'
-
-" Syntax/Alignment
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'tomtom/tcomment_vim'
-Plug 'junegunn/vim-easy-align'
-
-" Cursor
-Plug 'Lokaltog/vim-easymotion'
-
-" Productivity
 Plug '907th/vim-auto-save'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-dirvish'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'tomtom/tcomment_vim'
 
 " Display
 Plug 'itchyny/lightline.vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'Yggdroot/indentLine'
-
-" Syntax
-Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
-Plug 'cohama/vim-hier'
-Plug 'dannyob/quickfixstatus'
-Plug 'dag/vim-fish'
-
-" Markdown or texts
-Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
-Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }
 
 " Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -40,26 +24,30 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/switch.vim'
 
-"" Languages
-Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
-Plug 'nvie/vim-flake8',           { 'for': 'python' }
-Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
-Plug 'mattn/vim-goimports'
-Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
-Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
-Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
-Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
-Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
-Plug 'slim-template/vim-slim',    { 'for': 'slim' }
-Plug 'posva/vim-vue',             { 'for': 'vue' }
-Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
-Plug 'leafgarland/typescript-vim',{ 'for': ['javacsript', 'typescript'] }
+"" Development
 Plug 'MaxMEllon/vim-jsx-pretty',  { 'for': ['javacsript', 'typescript'] }
-
-" Development
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'cohama/vim-hier'
+Plug 'dag/vim-fish'
+Plug 'dannyob/quickfixstatus'
+Plug 'google/vim-jsonnet',        { 'for': 'jsonnet' }
+Plug 'https://gist.github.com/fda08ddb08cdd90c40f4.git', {'for' : ['markdown', 'md'] }
+Plug 'leafgarland/typescript-vim',{ 'for': ['javacsript', 'typescript'] }
+Plug 'markcornick/vim-terraform', { 'for': 'terraform' }
+Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
+Plug 'mattn/vim-goimports'
+Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
+Plug 'nvie/vim-flake8',           { 'for': 'python' }
+Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
+Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
+Plug 'posva/vim-vue',             { 'for': 'vue' }
+Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }
+Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
+Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
+Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'thinca/vim-quickrun'
+Plug 'vim-ruby/vim-ruby',         { 'for': ['ruby', 'eruby'] }
+Plug 'yoppi/fluentd.vim',         { 'for': 'fluentd' }
 
 "" Operators / Text objects (textobj)
 Plug 'kana/vim-operator-user'
@@ -68,7 +56,6 @@ Plug 'rhysd/vim-operator-surround'
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-anyblock'
 Plug 'thinca/vim-textobj-between'
-
 call plug#end()
 
 augroup vimrc
