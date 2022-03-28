@@ -38,7 +38,6 @@ Plug 'mattn/emmet-vim',           { 'for': ['html', 'javascript'] }
 Plug 'mattn/vim-goimports'
 Plug 'mpyatishev/vim-sqlformat',  { 'for': 'sql' }
 Plug 'nvie/vim-flake8',           { 'for': 'python' }
-Plug 'osyo-manga/vim-watchdogs', { 'for': 'all' } | Plug 'osyo-manga/shabadou.vim'
 Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }

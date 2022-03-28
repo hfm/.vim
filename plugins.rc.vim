@@ -1,7 +1,6 @@
 source $HOME/.vim/plugins.rc.d/ctrlp.rc.vim
 source $HOME/.vim/plugins.rc.d/lightline.rc.vim
 source $HOME/.vim/plugins.rc.d/quickrun.rc.vim
-source $HOME/.vim/plugins.rc.d/memolist.rc.vim
 source $HOME/.vim/plugins.rc.d/completion.rc.vim
 source $HOME/.vim/plugins.rc.d/ruby.rc.vim
 
