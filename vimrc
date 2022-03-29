@@ -14,15 +14,14 @@ Plug 'w0ng/vim-hybrid'
 Plug 'Yggdroot/indentLine'
 
 " Autocompletion
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-buffer.vim'
-Plug 'yami-beta/asyncomplete-omni.vim'
-Plug 'prabirshrestha/asyncomplete-file.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/switch.vim'
+Plug 'cohama/lexima.vim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
 
 "" Development
 Plug 'MaxMEllon/vim-jsx-pretty',  { 'for': ['javacsript', 'typescript'] }
@@ -89,6 +88,7 @@ set lazyredraw
 set showmatch
 set matchtime=1
 set scrolloff=5
+set signcolumn=yes
 runtime macros/matchit.vim
 if has('mac')
   set guifont=Cica:h16
@@ -132,3 +132,4 @@ autocmd FileType *
 
 " Keymaps
 nnoremap Y y$
+inoremap <BS> <C-h>
