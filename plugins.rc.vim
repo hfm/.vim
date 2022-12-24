@@ -3,6 +3,7 @@ source $HOME/.vim/plugins.rc.d/lightline.rc.vim
 source $HOME/.vim/plugins.rc.d/quickrun.rc.vim
 source $HOME/.vim/plugins.rc.d/completion.rc.vim
 source $HOME/.vim/plugins.rc.d/ruby.rc.vim
+source $HOME/.vim/plugins.rc.d/rust.rc.vim
 
 map <silent>sa <Plug>(operator-surround-append)
 map <silent>sd <Plug>(operator-surround-delete)
@@ -50,11 +51,6 @@ nmap <Leader>a <Plug>(EasyAlign)
 let g:voom_tree_width = 60
 let g:voom_default_mode = 'markdown'
 let g:indentLine_conceallevel = 0
-
-" vim-racer
-let g:racer_cmd = "$HOME/.cargo/bin/racer"
-let $RUST_SRC_PATH = "$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-let g:racer_experimental_completer = 1
 
 " js
 let g:vim_jsx_pretty_colorful_config = 1

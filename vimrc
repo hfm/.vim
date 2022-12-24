@@ -40,7 +40,6 @@ Plug 'nvie/vim-flake8',           { 'for': 'python' }
 Plug 'pangloss/vim-javascript',   { 'for': ['javacsript', 'typescript'] }
 Plug 'posva/vim-vue',             { 'for': 'vue' }
 Plug 'previm/previm', { 'for' : ['markdown', 'md', 'rst'] }
-Plug 'racer-rust/vim-racer',      { 'for': 'rust' }
 Plug 'rust-lang/rust.vim',        { 'for': 'rust' }
 Plug 'slim-template/vim-slim',    { 'for': 'slim' }
 Plug 'thinca/vim-quickrun'
