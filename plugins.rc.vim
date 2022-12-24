@@ -60,7 +60,7 @@ let g:racer_experimental_completer = 1
 let g:vim_jsx_pretty_colorful_config = 1
 
 " jsonnet
-let g:jsonnet_fmt_on_save = 0
+let g:jsonnet_fmt_on_save = 1
 
 " previm
 let g:previm_open_cmd = 'open -a Google\ Chrome'
