@@ -25,7 +25,7 @@ nmap <silent>srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 
 " vim-auto-save
 let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1
 
 " switch.vim
